@@ -39,7 +39,7 @@ Parametri Argon2id algoritma su:
 
 -   **Broj iteracija koje se izvršavaju nad memorijom -** t
 
--   **Stepen paralelizma (**tj. broj niti koje izvršavaju algoritam) - p
+-   **Stepen paralelizma** (tj. broj niti koje izvršavaju algoritam) - p
 
 Prema preporukama OWASP-a, preporučene vrednosti ovih parametara su:
 
