@@ -1,0 +1,759 @@
+{
+  "version": "2.2.0",
+  "summary": {
+    "title": "Payment System Diagram",
+    "owner": "",
+    "description": "",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "New STRIDE diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.2.0",
+        "cells": [
+          {
+            "position": {
+              "x": 100,
+              "y": 150
+            },
+            "size": {
+              "width": 140,
+              "height": 70
+            },
+            "attrs": {
+              "text": {
+                "text": "Browser/Mobile App"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "id": "4b4c6ce7-a8f7-49f6-a334-0b29feb86446",
+            "data": {
+              "type": "tm.Actor",
+              "name": "Browser/Mobile App",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 438,
+              "y": 120
+            },
+            "size": {
+              "width": 120,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Reverse Proxy\n (e.g. Nginx)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 2,
+            "id": "c39b6ac1-eb02-443a-9dfd-e07c131de444",
+            "data": {
+              "type": "tm.Process",
+              "name": "Reverse Proxy\n (e.g. Nginx)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "1. Payment Execution Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "5b6717e6-1a94-4906-9c64-aafa9fa1ebc2",
+            "labels": [
+              "1. Payment Execution Request"
+            ],
+            "source": {
+              "cell": "4b4c6ce7-a8f7-49f6-a334-0b29feb86446"
+            },
+            "target": {
+              "cell": "c39b6ac1-eb02-443a-9dfd-e07c131de444"
+            },
+            "vertices": [
+              {
+                "x": 310,
+                "y": 150
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "d48cf747-5074-4975-a989-2f2038903e66",
+            "source": {
+              "x": 660,
+              "y": 410
+            },
+            "target": {
+              "x": 840,
+              "y": 410
+            },
+            "vertices": [
+              {
+                "x": 690,
+                "y": 320
+              },
+              {
+                "x": 760,
+                "y": 300
+              },
+              {
+                "x": 830,
+                "y": 330
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "bd6a1fd2-7e27-480b-9cd1-b88196bcce5f",
+            "source": {
+              "x": 300,
+              "y": 100
+            },
+            "target": {
+              "x": 320,
+              "y": 300
+            },
+            "vertices": [
+              {
+                "x": 340,
+                "y": 190
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "2. Initialize",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "b6700840-14f2-46a9-90aa-401af35e15f3",
+            "labels": [
+              "2. Initialize"
+            ],
+            "source": {
+              "cell": "760a3d47-6027-4b15-96a9-4fb8da5923f3"
+            },
+            "target": {
+              "cell": "6ac26a26-81ab-48f0-921a-c6961941821d"
+            },
+            "vertices": [
+              {
+                "x": 790,
+                "y": 90
+              },
+              {
+                "x": 890,
+                "y": 60
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "3. Request Payment",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "919fb080-daa4-47f0-ab7e-c577c71aeb71",
+            "labels": [
+              "3. Request Payment"
+            ],
+            "source": {
+              "cell": "6ac26a26-81ab-48f0-921a-c6961941821d"
+            },
+            "target": {
+              "cell": "05fe4156-3b0b-407f-ac03-93e6a40b2e18"
+            },
+            "vertices": [
+              {
+                "x": 1110,
+                "y": 20
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "4. Payment Status Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "ee3c1554-47c6-49ed-aeff-60e75ec09e8f",
+            "labels": [
+              "4. Payment Status Response"
+            ],
+            "source": {
+              "cell": "05fe4156-3b0b-407f-ac03-93e6a40b2e18"
+            },
+            "target": {
+              "cell": "6ac26a26-81ab-48f0-921a-c6961941821d"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "5. Payment Status Add Query",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "b74bf552-4c29-4646-9a5e-1d5bc8ef3853",
+            "labels": [
+              "5. Payment Status Add Query"
+            ],
+            "source": {
+              "cell": "6ac26a26-81ab-48f0-921a-c6961941821d"
+            },
+            "target": {
+              "cell": "d7d7e304-b5ca-4951-a548-fc3ee92583e5"
+            },
+            "vertices": [
+              {
+                "x": 900,
+                "y": 260
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "6. Payment\n Status\n Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "24bf2d76-f842-4547-afd7-f49565cacb23",
+            "labels": [
+              "6. Payment\n Status\n Response"
+            ],
+            "source": {
+              "cell": "6ac26a26-81ab-48f0-921a-c6961941821d"
+            },
+            "target": {
+              "cell": "760a3d47-6027-4b15-96a9-4fb8da5923f3"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "7. Payment Execution Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "91ffd109-f134-43af-8d43-6a2962b18ef0",
+            "labels": [
+              "7. Payment Execution Response"
+            ],
+            "source": {
+              "cell": "c39b6ac1-eb02-443a-9dfd-e07c131de444"
+            },
+            "target": {
+              "cell": "4b4c6ce7-a8f7-49f6-a334-0b29feb86446"
+            },
+            "vertices": [
+              {
+                "x": 350,
+                "y": 230
+              },
+              {
+                "x": 290,
+                "y": 230
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "94e861cf-a29d-46b2-9f46-61dffda81801",
+            "source": {
+              "x": 540,
+              "y": 90
+            },
+            "target": {
+              "x": 540,
+              "y": 240
+            },
+            "vertices": [
+              {
+                "x": 610,
+                "y": 150
+              },
+              {
+                "x": 590,
+                "y": 220
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Proxied Traffic",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "65d948b9-ef3d-4ef3-893b-7759b0ccff14",
+            "labels": [
+              "Proxied Traffic"
+            ],
+            "source": {
+              "cell": "c39b6ac1-eb02-443a-9dfd-e07c131de444"
+            },
+            "target": {
+              "cell": "760a3d47-6027-4b15-96a9-4fb8da5923f3"
+            },
+            "vertices": [
+              {
+                "x": 600,
+                "y": 210
+              },
+              {
+                "x": 650,
+                "y": 190
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "0f9facb5-b223-44d0-8307-7ed15d466ddd",
+            "source": {
+              "x": 1010,
+              "y": 10
+            },
+            "target": {
+              "x": 1020,
+              "y": 250
+            },
+            "vertices": [
+              {
+                "x": 1080,
+                "y": 90
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": 690,
+              "y": 135
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Web Requests\nProcessor"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 11,
+            "id": "760a3d47-6027-4b15-96a9-4fb8da5923f3",
+            "data": {
+              "type": "tm.Process",
+              "name": "Web Requests\nProcessor",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 690,
+              "y": 340
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "SQL Database"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 12,
+            "id": "d7d7e304-b5ca-4951-a548-fc3ee92583e5",
+            "data": {
+              "type": "tm.Store",
+              "name": "SQL Database",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 880,
+              "y": 80
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Payment \nBackground \nProcess"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 13,
+            "id": "6ac26a26-81ab-48f0-921a-c6961941821d",
+            "data": {
+              "type": "tm.Process",
+              "name": "Payment \nBackground \nProcess",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1140,
+              "y": 190
+            },
+            "size": {
+              "width": 150,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "External Payment\nSystem (e.g. Stride)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 14,
+            "id": "05fe4156-3b0b-407f-ac03-93e6a40b2e18",
+            "data": {
+              "type": "tm.Actor",
+              "name": "External Payment\nSystem (e.g. Stride)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          }
+        ]
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "",
+    "threatTop": 0
+  }
+}
