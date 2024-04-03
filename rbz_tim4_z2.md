@@ -263,7 +263,7 @@ Svi korisnici sistema mogu pristupiti aplikaciji pomoću pretraživača
 koriste isključivo *Browser*. Na slici ispod (slika 1) se nalazi
 konteksni dijagram najvišeg nivoa toka podataka u aplikaciji.
 
-![](media/image1.png){width="7.804166666666666in"
+![](media/general.png){width="7.804166666666666in"
 height="3.0708333333333333in"}Slika 1
 
 *Reverse Proxy* komponenta predstavlja server statičkog sadržaja
@@ -296,10 +296,10 @@ osnovne komponente:
 > Na slici ispod (slika 2) je prikazan tok komunikacije i podataka pri
 > zatraženom plaćanju od strane korisnika.
 >
-> ![](media/image2.png){width="7.660501968503937in" height="2.7in"}Slika
+> ![](media/logging.png){width="7.660501968503937in" height="2.7in"}Slika
 > 2
 >
-> ![](media/image3.png){width="7.610416666666667in"
+> ![](media/payment.png){width="7.610416666666667in"
 > height="2.9770833333333333in"}Na slici ispod (slika 3) je prikazan tok
 > komunikacije i podataka *logging* podsistema.
 >
