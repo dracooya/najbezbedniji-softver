@@ -264,7 +264,7 @@ koriste isključivo *Browser*. Na slici ispod (slika 1) se nalazi
 konteksni dijagram najvišeg nivoa toka podataka u aplikaciji.
 
 ![](media/general.png)
-            Slika 1
+           <p align="center">Slika 1</p>
 
 *Reverse Proxy* komponenta predstavlja server statičkog sadržaja
 (*frontend*-a) aplikacije, kao i ulaznu tačku svih korisnika u sistem. U
@@ -296,13 +296,13 @@ osnovne komponente:
 Na slici ispod (slika 2) je prikazan tok komunikacije i podataka pri
 zatraženom plaćanju od strane korisnika.
 
- ![](media/logging.png)
-         Slika 2
+ ![](media/payment.png)
+         <p align="center">Slika 2</p>
 
  Na slici ispod (slika 3) je prikazan tok
  komunikacije i podataka *logging* podsistema.
- ![](media/payment.png)
-             Slika 3
+ ![](media/logging.png)
+            <p align="center"> Slika 3</p>
 
  Admin je jedini u mogućnosti da zatraži pristup logovima i vrši
  analizu istih. Prema tome, njegovi zahtevi su posebno naznačeni kao
