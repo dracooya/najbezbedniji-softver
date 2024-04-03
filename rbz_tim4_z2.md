@@ -264,7 +264,7 @@ koriste isključivo *Browser*. Na slici ispod (slika 1) se nalazi
 konteksni dijagram najvišeg nivoa toka podataka u aplikaciji.
 
 ![](media/general.png)
-Slika 1
+            Slika 1
 
 *Reverse Proxy* komponenta predstavlja server statičkog sadržaja
 (*frontend*-a) aplikacije, kao i ulaznu tačku svih korisnika u sistem. U
@@ -293,21 +293,21 @@ osnovne komponente:
 -   ***Logging Subsystem Process*** - proces koji se konstantno izvršava
     u pozadini i služi za prikupljanje i analizu logova aplikacije.
 
-> Na slici ispod (slika 2) je prikazan tok komunikacije i podataka pri
-> zatraženom plaćanju od strane korisnika.
->
-> ![](media/logging.png)
-> Slika 2
->
-> Na slici ispod (slika 3) je prikazan tok
-> komunikacije i podataka *logging* podsistema.
-> ![](media/payment.png)
-> Slika 3
->
-> Admin je jedini u mogućnosti da zatraži pristup logovima i vrši
-> analizu istih. Prema tome, njegovi zahtevi su posebno naznačeni kao
-> autorizovani. Naravno, korisnički *web* zahtevi su takođe prethodno
-> autorizovani, ali oni mogu prouzrokovati **samo** dodavanje novog
-> zapisa u *log*-ovima, i to ne eksplicitno. Tok *Responses* se odnosi i
-> na korisničke zahteve, i na autorizovane zahteve za pristup
-> *log*-ovima.
+Na slici ispod (slika 2) je prikazan tok komunikacije i podataka pri
+zatraženom plaćanju od strane korisnika.
+
+ ![](media/logging.png)
+         Slika 2
+
+ Na slici ispod (slika 3) je prikazan tok
+ komunikacije i podataka *logging* podsistema.
+ ![](media/payment.png)
+             Slika 3
+
+ Admin je jedini u mogućnosti da zatraži pristup logovima i vrši
+ analizu istih. Prema tome, njegovi zahtevi su posebno naznačeni kao
+ autorizovani. Naravno, korisnički *web* zahtevi su takođe prethodno
+ autorizovani, ali oni mogu prouzrokovati **samo** dodavanje novog
+ zapisa u *log*-ovima, i to ne eksplicitno. Tok *Responses* se odnosi i
+ na korisničke zahteve, i na autorizovane zahteve za pristup
+ *log*-ovima.
