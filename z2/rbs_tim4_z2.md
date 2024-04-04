@@ -264,7 +264,7 @@ koriste isključivo *Browser*. Na slici ispod (slika 1) se nalazi
 konteksni dijagram najvišeg nivoa toka podataka u aplikaciji.
 
 ![](media/general.png)
-           <p align="center">Slika 1</p>
+<p align="center">Slika 1</p>
 
 *Reverse Proxy* komponenta predstavlja server statičkog sadržaja
 (*frontend*-a) aplikacije, kao i ulaznu tačku svih korisnika u sistem. U
@@ -293,16 +293,17 @@ osnovne komponente:
 -   ***Logging Subsystem Process*** - proces koji se konstantno izvršava
     u pozadini i služi za prikupljanje i analizu logova aplikacije.
 
-Na slici ispod (slika 2) je prikazan tok komunikacije i podataka pri
-zatraženom plaćanju od strane korisnika.
+ Na slici ispod (slika 2) je prikazan tok komunikacije i podataka pri
+ zatraženom plaćanju od strane korisnika.
 
  ![](media/payment.png)
-         <p align="center">Slika 2</p>
+ <p align="center">Slika 2</p>
 
  Na slici ispod (slika 3) je prikazan tok
  komunikacije i podataka *logging* podsistema.
+
  ![](media/logging.png)
-            <p align="center"> Slika 3</p>
+ <p align="center">Slika 3</p>
 
  Admin je jedini u mogućnosti da zatraži pristup logovima i vrši
  analizu istih. Prema tome, njegovi zahtevi su posebno naznačeni kao
@@ -311,3 +312,152 @@ zatraženom plaćanju od strane korisnika.
  zapisa u *log*-ovima, i to ne eksplicitno. Tok *Responses* se odnosi i
  na korisničke zahteve, i na autorizovane zahteve za pristup
  *log*-ovima.
+
+## Zadatak 5
+
+> Na osnovu dijagrama iz prethodnog zadatka, kao i uz pomoć *STRIDE*
+> metodologije, identifikovane su sledeće pretnje koje su date u
+> nastavku. Svaka pretnja je objašnjena, razložena i dat je predlog za
+> njeno ublažavanje (*mitigation*).
+
+1.  **S (Spoofing).** Oponašanje nekoga ili nečega. Najčešće se odnosi
+    na lažno predstavljanje korisnika ili krađu identiteta drugog
+    korisnika. Kako je unutar sistema implementirana autentifikacija,
+    ovakva vrsta napada na sistem mora započeti spolja.
+
+    a.  **Krađa kredencijala.** Ukoliko kredencijali nekog od zaposlenih
+        budu ukradeni, to može dovesti do velikih problema za celokupnu
+        kompaniju, pa tako i samu aplikaciju. Ovo se može desiti na
+        razne načine.
+
+        i.  ***Phishing* e-pošta.** Pokušaji ovakvih napada su veoma
+            česti. Neki od zaposlenih (ili korisnik) dobije e-poštu u
+            kojoj se maliciozni akter pretvara da je zaposleni ili deo
+            sistema. Unutar e-pošte obično postoji link koji vodi do
+            sajta koji često liči na originalni i traži unos
+            kredencijala. U ređim slučajevima se nakon odlaska na link
+            aktivira skripta koja na neki način krade privatne
+            informacije korisnika, pa tako i kredencijale. Najlakši
+            način za mitigaciju ovakvih napada jeste obaveštavanje i
+            trening zaposlenih. Phishing je često lak za prepoznavanje,
+            na osnovu adrese sa koje je poslat, i nakon dobijanja takve
+            pošte, potrebno ju je prijaviti.
+
+        ii. **Cookie hijacking.** Prisluškivanjem kanala komunikacije,
+            moguće je pronaći cookie koji korisnik dostavlja sistemu za
+            potrebe autentifikacije. Uz pomoć ovoga, moguće je
+            predstaviti se sistemu kao drugi korisnik. Kako bi se
+            odbranili od ovakvog napada, najbolje je umesto cookie-a
+            koristiti JWT, kako je nemoguće u potpunosti osigurati sve
+            kanale komunikacije.
+
+        iii. **JWT napadi.** Naravno, ni JWT nije u potpunosti siguran i
+             postoji mnoštvo napada kao što su Null signature attack,
+             None Attack, Blank password, Playbook Scan i drugi. Većina
+             ovih napada se zasniva na tome da je struktura JWT tokena
+             poznata i iako je on potpisan, postoji mogućnost
+             eksploatacije. Ublažavanje ovakvog napada je kreiranje
+             kratkoročnih JWT tokena i kreiranje jake šifre za njihovo
+             potpisivanje.
+
+    b.  **Pogađanje šifre.** Jednostavan napad gde maliciozni akter
+        prosto pogodi šifru drugog korisnika i preuzme njegov identitet
+        u aplikaciji. Ublažava se kreiranjem jakih šifri koje se ne
+        sastoje od privatnih informacija do kojih neko drugi može doći,
+        kao i promena eventualnih podrazumevanih šifri koje sistem
+        kreira.
+
+2.  **T (Tampering).** Izmena podataka ili koda
+
+    a.  **SQL Injection.** Najjednostavniji napad u kom korisnik
+        pokušava da neovlašćeno izmeni sadržaj servera. Mitigacija ovog
+        napada se jednostavno postiže implementacijom mera na beku kao
+        što su *prepared statements* i *parameterized queries*
+
+    b.  **Man-in-the-middle (MitM) napad.** Ovakav napad se izvršava
+        tako što se komunikacija između korisnika i aplikacije presretne
+        od strane malicioznog aktera. Tačnije, zahtev koji korisnik
+        upućuje serveru ili odgovor koji server šalje korisniku biva
+        izmenjen pre stizanja na svoje odredište. Mitigacija MitM napada
+        je u ovoj aplikaciji izvršena korišćenjem HTTPS-a.
+
+3.  **R (Repudiation).** Tvrdnja da korisnik nije izvršio radnju. Ovakvi
+    napadi su znatno ređi ukoliko je neporecivost sistema uspostavljena
+    na adekvatan način.
+
+    a.  **Korisnik poriče da je uradio akciju unutar sistema**. Jedan od
+        glavnih načina za osiguravanje neporecivosti unutar aplikacije
+        uz pomoć loging podsistema. Ovaj podsistem pamti akcije koje se
+        dešavaju u ostatku sistema, kao i korisnike koji ih izvršavaju.
+        Ukoliko je loging sistem adekvatno implementiran, verovatnoća
+        ovakvog napada je veoma mala.
+
+    b.  **Izmena logova**. Kao što se vidi iz dijagrama (Slika 3),
+        korisnici nemaju direktan pristup loging podsistemu, stoga je
+        manipulacija njime od spolja veoma teška. Sa druge strane, u
+        slučaju da se logovi čuvaju na udaljenom serveru ili *cloud-u*
+        moguć je direktan napad na samo skladište podataka. Ovakav tip
+        napada je detaljnije razmatran unutar Tampering dela ove
+        analize, ali umanjenje neporecivosti može biti posledica ovakvog
+        napada.
+
+    c.  **Poricanje fizičkih akcija koje ugrožavaju sistem**. Ukoliko
+        neko fizičko lice načini štetu nad fizičkom infrastrukturom
+        aplikacije, takođe mora da se osigura neporecivost. Kamere
+        unutar serverskih soba bi bile adekvatan način za održavanje
+        neporecivosti, ali kontrola pristupa samim serverima bi
+        osigurala da do pokušaja napada ni ne dođe.
+
+4.  **I (Information Disclosure).** Izlaganje informacija neovlašćenim
+    korisnicima
+
+    a.  **Virusi.** Mnogi virusi mogu da ukradu privatne informacije
+        korisnika kao što su šifre. U gorem slučaju, virus može doći u
+        kontakt sa serverom gde dobije pristup svim informacijama
+        sistema. Mitigacija se vrši zaštitom servera od virusa raznim
+        merama, preporukama i treningom zaposlenih i korisnika.
+
+    b.  **SQL Injection.** Čest i jednostavan napad gde korisnik u formu
+        na web ili mobilnoj aplikaciji unosi SQL upit i očekuje ispis iz
+        baze kao odgovor. Ovim napadom maliciozni akter dobija veći deo
+        informacija sa servera nego što je predviđeno, ili u nekim
+        slučajevima i sve. Mitigacija ovog SQL Injection napada se vrši
+        na isti način kao i kod ranije navedenog.
+
+5.  **D (Denial of Service)**. Uskraćivanje ili degradiranje usluga
+    korisnicima
+
+    a.  **DOS (Denial of Service).** Najčešće se odnosi na
+        preopterećivanje nekog od servisa aplikacije od strane
+        malicioznog aktera slanjem ogromnog broja zahteva. Ovaj napad je
+        veoma lako pokušati, ali je i veoma lak za mitigaciju. DOS napad
+        se ublažava korišćenjem *Reverse Proxy* servera,
+        *blacklisting*-om, uvođenjem redundansi u infrastrukturu sistema
+        kao i *Incident response planning*-om.
+
+    b.  **DDOS (Distributed Denial of Service).** Opasnija verzija DOS
+        napada koji je, kao što mu ime kaže, distribuiran. Za razliku od
+        DOS napada koji se dešava sa jednog računara, DDOS predstavlja
+        mnoštvo istovremenih DOS napada sa različitih adresa. Ovakav
+        napad je relativno redak, ali nažalost postaje sve češći
+        povećanjem dostupnosti hardvera. Veoma je teško odbraniti se od
+        DDOS napada, ali ublažavanje se vrši na sličan način kao i kod
+        DOS napada, uz implementaciju robusnih *monitoring* algoritama
+        ili u češćem slučaju, prebacivanjem odgovornosti za sigurnost na
+        druge firme kao što su *cloud* provajderi ili korišćenjem već
+        gotovih rešenja.
+
+6.  **E (Elevation of Privilege)**. Davanje neovlašćenih mogućnosti
+    korisnicima.
+
+    a.  **Pronalaženje kredencijala admina.** U slučaju da korisnik
+        dobije pristup administratorskom nalogu, dobija i sve mogućnosti
+        koje on ima. Mitigacija ovakvog napada se vrši promenom
+        kredencijala administratora sa podrazumevanih i kreiranjem jake
+        šifre.
+
+    b.  **Cross-site scripting (XSS) napad.** XSS je napad u kom
+        zlonamerni korisnik ubacuje malicioznu izvršnu skriptu u
+        aplikaciju ili web stranicu. Ovo može dovesti do neovlašćenog
+        korišćenja ili preuzimanja sistema. XSS se ublažava validacijom
+        formi i ulaza u sistem i drugim algoritamskim metodama.
