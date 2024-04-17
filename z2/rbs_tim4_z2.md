@@ -315,10 +315,10 @@ osnovne komponente:
 
 ## Zadatak 5
 
-> Na osnovu dijagrama iz prethodnog zadatka, kao i uz pomoć *STRIDE*
-> metodologije, identifikovane su sledeće pretnje koje su date u
-> nastavku. Svaka pretnja je objašnjena, razložena i dat je predlog za
-> njeno ublažavanje (*mitigation*).
+ Na osnovu dijagrama iz prethodnog zadatka, kao i uz pomoć *STRIDE*
+ metodologije, identifikovane su sledeće pretnje koje su date u
+ nastavku. Svaka pretnja je objašnjena, razložena i dat je predlog za
+ njeno ublažavanje (*mitigation*).
 
 1.  **S (Spoofing).** Oponašanje nekoga ili nečega. Najčešće se odnosi
     na lažno predstavljanje korisnika ili krađu identiteta drugog
