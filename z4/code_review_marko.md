@@ -1,4 +1,4 @@
-Aplikacija za potpisivanje elektronskih sertifikata
+# **Aplikacija za potpisivanje elektronskih sertifikata**
 
 Tech Stack
 
