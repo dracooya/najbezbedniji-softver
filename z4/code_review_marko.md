@@ -36,16 +36,23 @@ Aplikacija je namenjena za tri vrste korisnika:
   - Osetljivi podaci poput maila i lozinke za slanje mailova su izloženi riziku jer su hardkodovani u konfiguracionom fajlu application.properties, umesto da se čuvaju kao environment varijable.
   - **Preporuka**: Premestiti osetljive podatke (mail i lozinka) iz application.properties u environment varijable radi bolje sigurnosti.
 - **Secret za JWT izložen**
-  - Tajni ključ (Secret) za JWT (JSON Web Token) je hardkodovan direktno u kodu umesto da se čuva kao environment varijabla.
-  - **Preporuka**: Premestiti tajni ključ za JWT iz koda aplikacije u environment varijablu radi poboljšanja sigurnosti.
+  - JWT token je hardkodovan i lako je doći do njega.
+  - **Preporuka**: JWT treba čuvati u environment variabli ili uz pomoć eksterne aplikacije.
 - **Linter**
   - Korišćen je MegaLinter.
   - Linter je otkrio različite probleme sa stilom koda kao što su nekonzistentnost u razmacima, imenovanju, nekorišćenje readonly ključne reči kad god je to moguće.
-    - **Preporuka**: Koristiti linter alate kao što su ESLint ili TSLint kako bi se automatski otkrili i ispravili problemi sa stilom koda. Definisati jasna pravila o stilu koda i insistirati na njihovom poštovanju.
-  - Postoji duplirani kod na beku, isti DTO-ovi se koriste na više mesta, postoji više verzija istih fajlova, što otežava održavanje i povećava mogućnost grešaka.
+    - **Preporuka**: Koristiti lintere sa jasnim pravilima i bilo dozvoljavati im da prave promene u kodu ili ispratiti njihove preporuke.
+  - Čuvanje šifre za bazu u kogu.
+    - Ista preporuka kao i za JWT
+  - Linter je uoćio da je oko 11% koda duplirano, što smanjuje čitljivost i otežava održavanje
     - **Preporuka**: Refaktorisati kod kako bi se eliminisali duplikati i nepotrebne verzije fajlova. Koristiti principe DRY (Don't Repeat Yourself) i SOLID kako bi se poboljšala modularnost i čitljivost koda.
-  - Postoje neiskorišćeni importi, nedostaju dokumentacije, linije koda su predugačke, imena promenljivih i funkcija su nekonzistentna, a magični brojevi se koriste direktno u kodu.
-    - **Preporuka**: Očistiti kod od neiskorišćenih importa, dodati dokumentacije tamo gde je potrebno, smanjiti dužinu linija koda, uskladiti imena promenljivih i funkcija prema dogovorenim konvencijama, i izbegavati korišćenje magičnih brojeva.
+![](vulnerabilities3.png)
+  -Na frontu je pronađen određeni broj orphan tagova.
+    - **Preporuka** Obratiti veću pažnju pri pisanju fronta
+  - Takođe je pronašao leak tajni na gitu, u jednom trenutku je tajna bila commitovana na git
+    - **Preporuka** Kao i za JWT
+  -  Mnoge stilske greške kao što su neiskorišćeni importi, nedostaju dokumentacije, linije koda su predugačke, imena promenljivih i funkcija su nekonzistentna, a magični brojevi se koriste direktno u kodu.
+    - **Preporuka**: Ostaviti vreme za refaktorisanje koda.
 
 ![](vulnerabilities3.png)
 
