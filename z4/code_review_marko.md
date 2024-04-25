@@ -11,7 +11,7 @@ Frontend:
 
 - Angular (koristeći material)
 
-Opis
+# **Opis**
 
 Fokus ovog projekta je bio kreiranje softvera za potpisivanje digitalnih sertifikata sa akcentom na bezbednosti. Sa ovim u vidu, nije bio očekivan ogroman broj propusta u bezbednosti. Ovo je bila pogrešna pretpostavka. Najverovatniji razlog propustima je to što se razvojni tim prvi put sretao sa ovakvim problemima i na nevešt način se izborio sa njima.
 
@@ -27,7 +27,7 @@ Aplikacija je namenjena za tri vrste korisnika:
 - Marko Milijanović SV56/2020
 - Vuk Radmilović SV73/2020
 
-Defekti
+# **Defekti**
 
 - **Slanje lozinki preko HTTP**:
   - Lozinke se šalju preko nebezbedne HTTP veze, što ih čini podložnim krađi tokom procesa prijave korisnika.
