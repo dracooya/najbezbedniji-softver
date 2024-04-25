@@ -44,9 +44,11 @@ Aplikacija je namenjena za tri vrste korisnika:
     - **Preporuka**: Koristiti lintere sa jasnim pravilima i bilo dozvoljavati im da prave promene u kodu ili ispratiti njihove preporuke.
   - Čuvanje šifre za bazu u kogu.
     - Ista preporuka kao i za JWT
-  - Linter je uoćio da je oko 11% koda duplirano, što smanjuje čitljivost i otežava održavanje
+  - Linter je uoćio da je oko 12% koda duplirano, što smanjuje čitljivost i otežava održavanje.
     - **Preporuka**: Refaktorisati kod kako bi se eliminisali duplikati i nepotrebne verzije fajlova. Koristiti principe DRY (Don't Repeat Yourself) i SOLID kako bi se poboljšala modularnost i čitljivost koda.
-![](vulnerabilities3.png)
+
+![](repeat.png)
+
   -Na frontu je pronađen određeni broj orphan tagova.
     - **Preporuka** Obratiti veću pažnju pri pisanju fronta
   - Takođe je pronašao leak tajni na gitu, u jednom trenutku je tajna bila commitovana na git
