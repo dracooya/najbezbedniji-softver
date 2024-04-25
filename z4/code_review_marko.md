@@ -29,21 +29,8 @@ Aplikacija je namenjena za tri vrste korisnika:
 
 # **Defekti**
 
-- **Slanje lozinki preko HTTP**:
-  - Lozinke se šalju preko nebezbedne HTTP veze, što ih čini podložnim krađi tokom procesa prijave korisnika.
-    - **Preporuka**: Implementirati sigurnu HTTPS vezu za sve komunikacije koje uključuju slanje osetljivih podataka, kao što su lozinke korisnika.
-- **Resetovanje lozinke bez provere broja pokušaja**:
-  - Sistem omogućava resetovanje lozinke bilo kom korisniku ako se unese validan ID korisnika i kod za reset. Nedostaje provera koliko puta je korisnik pokušao da unese kod za reset.
-    - **Preporuka**: Implementirati proveru broja pokušaja i ograničiti broj neuspešnih pokušaja na 3, nakon čega bi se generisao novi kod za reset.
 - **Nedostatak autorizacije u endpointima**:
   - Postoji ogroman broj endpointova koji nemaju pravilno odrađenu autorizaciju. Postoje čak i neki endpointovi koji su duplikati, gde postoji i verzija sa autorizacijom i bez autorizacije, i moguće je koristiti i jednu i drugu. Između ostalog ovo je zbog toga što se projekat radio i za angular frontend i za mobilnu aplikaciju, gde je negde korišćen JWT token a negde ne, i gde je to sve na kraju usklađeno na veoma nebezbedan način. Zbog ovoga je izložena ogromna količina privatnih podataka i cela aplikacija je kompromitovana
-  - Neki primeri uočenih endpointova bez autorizacije:
-    - findRides – moguće je pronaći istoriju vožnje bilo kog korisnika
-    - izlistavanje svih korisnika registrovanih u sistemu
-    - nalaženje podataka o korisniku preko njegovog email-a
-    - nabavljanje i menjanje vozačevih dokumenata
-    - nabavljanje i slanje poruka
-    - mogućnost otkazivanja tuđih vožnji
   - **Preporuka**: Implementirati mehanizme autorizacije za sve endpointe kako bi se osiguralo da samo autorizovani korisnici mogu pristupiti svojim privatnim informacijama.
 - **Mail i lozinka za slanje mailova su izloženi**
   - Osetljivi podaci poput maila i lozinke za slanje mailova su izloženi riziku jer su hardkodovani u konfiguracionom fajlu application.properties, umesto da se čuvaju kao environment varijable.
