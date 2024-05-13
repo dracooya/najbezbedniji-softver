@@ -1,0 +1,14 @@
+COMMAND    PID            USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+systemd-r  561 systemd-resolve   13u  IPv4  21854      0t0  UDP 127.0.0.53:53 
+avahi-dae  590           avahi   12u  IPv4  21961      0t0  UDP *:5353 
+avahi-dae  590           avahi   13u  IPv6  21962      0t0  UDP *:5353 
+avahi-dae  590           avahi   14u  IPv4  21963      0t0  UDP *:51918 
+avahi-dae  590           avahi   15u  IPv6  21964      0t0  UDP *:50710 
+NetworkMa  592            root   25u  IPv4   1476      0t0  UDP 172.26.151.84:68->172.26.144.1:67 
+cups-brow  759            root    7u  IPv4  20930      0t0  UDP *:631 
+ntpd      5050             ntp   16u  IPv6  70864      0t0  UDP *:123 
+ntpd      5050             ntp   17u  IPv4  70867      0t0  UDP *:123 
+ntpd      5050             ntp   18u  IPv4  70871      0t0  UDP 127.0.0.1:123 
+ntpd      5050             ntp   19u  IPv4  70873      0t0  UDP 172.26.151.84:123 
+ntpd      5050             ntp   20u  IPv6  70875      0t0  UDP [::1]:123 
+ntpd      5050             ntp   21u  IPv6  70877      0t0  UDP [fe80::8604:4566:2dfe:efc5]:123 

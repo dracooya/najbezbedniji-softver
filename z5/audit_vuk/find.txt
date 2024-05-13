@@ -1,0 +1,49 @@
+      135    121 -rwsr-xr-x   1 root     root       123560 апр  8  2022 /snap/snapd/15534/usr/lib/snapd/snap-confine
+      849     84 -rwsr-xr-x   1 root     root        85064 феб  6 13:49 /snap/core20/2264/usr/bin/chfn
+      855     52 -rwsr-xr-x   1 root     root        53040 феб  6 13:49 /snap/core20/2264/usr/bin/chsh
+      925     87 -rwsr-xr-x   1 root     root        88464 феб  6 13:49 /snap/core20/2264/usr/bin/gpasswd
+     1009     55 -rwsr-xr-x   1 root     root        55528 мај 30  2023 /snap/core20/2264/usr/bin/mount
+     1018     44 -rwsr-xr-x   1 root     root        44784 феб  6 13:49 /snap/core20/2264/usr/bin/newgrp
+     1033     67 -rwsr-xr-x   1 root     root        68208 феб  6 13:49 /snap/core20/2264/usr/bin/passwd
+     1143     67 -rwsr-xr-x   1 root     root        67816 мај 30  2023 /snap/core20/2264/usr/bin/su
+     1144    163 -rwsr-xr-x   1 root     root       166056 апр  4  2023 /snap/core20/2264/usr/bin/sudo
+     1202     39 -rwsr-xr-x   1 root     root        39144 мај 30  2023 /snap/core20/2264/usr/bin/umount
+     1291     51 -rwsr-xr--   1 root     systemd-resolve    51344 окт 25  2022 /snap/core20/2264/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+     1665    467 -rwsr-xr-x   1 root     root              477672 јан  2 18:13 /snap/core20/2264/usr/lib/openssh/ssh-keysign
+      812     84 -rwsr-xr-x   1 root     root               85064 јул 15  2021 /snap/core20/1434/usr/bin/chfn
+      818     52 -rwsr-xr-x   1 root     root               53040 јул 15  2021 /snap/core20/1434/usr/bin/chsh
+      887     87 -rwsr-xr-x   1 root     root               88464 јул 15  2021 /snap/core20/1434/usr/bin/gpasswd
+      971     55 -rwsr-xr-x   1 root     root               55528 феб  7  2022 /snap/core20/1434/usr/bin/mount
+      980     44 -rwsr-xr-x   1 root     root               44784 јул 15  2021 /snap/core20/1434/usr/bin/newgrp
+      993     67 -rwsr-xr-x   1 root     root               68208 јул 15  2021 /snap/core20/1434/usr/bin/passwd
+     1102     67 -rwsr-xr-x   1 root     root               67816 феб  7  2022 /snap/core20/1434/usr/bin/su
+     1103    163 -rwsr-xr-x   1 root     root              166056 јан 19  2021 /snap/core20/1434/usr/bin/sudo
+     1161     39 -rwsr-xr-x   1 root     root               39144 феб  7  2022 /snap/core20/1434/usr/bin/umount
+     1248     51 -rwsr-xr--   1 root     systemd-resolve    51344 јун 11  2020 /snap/core20/1434/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+     1620    463 -rwsr-xr-x   1 root     root              473576 дец  2  2021 /snap/core20/1434/usr/lib/openssh/ssh-keysign
+   264540     36 -rwsr-xr--   1 root     messagebus         35112 апр  1  2022 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+   269889    332 -rwsr-xr-x   1 root     root              338536 феб 26  2022 /usr/lib/openssh/ssh-keysign
+   271037     16 -rwsr-sr-x   1 root     root               14488 мар  1  2022 /usr/lib/xorg/Xorg.wrap
+   782816    136 -rwsr-xr-x   1 root     root              138408 апр 21  2022 /usr/lib/snapd/snap-confine
+   300571     20 -rwsr-xr-x   1 root     root               18736 феб 26  2022 /usr/libexec/polkit-agent-helper-1
+      298     72 -rwsr-xr-x   1 root     root               72712 мар 14  2022 /usr/bin/chfn
+      170     36 -rwsr-xr-x   1 root     root               35192 феб 21  2022 /usr/bin/umount
+      349    228 -rwsr-xr-x   1 root     root              232408 феб 14  2022 /usr/bin/sudo
+      243     56 -rwsr-xr-x   1 root     root               55672 феб 21  2022 /usr/bin/su
+      827     32 -rwsr-xr-x   1 root     root               30872 феб 26  2022 /usr/bin/pkexec
+      169     48 -rwsr-xr-x   1 root     root               47480 феб 21  2022 /usr/bin/mount
+      299     44 -rwsr-xr-x   1 root     root               44808 мар 14  2022 /usr/bin/chsh
+      285     40 -rwsr-xr-x   1 root     root               40496 мар 14  2022 /usr/bin/newgrp
+      302     60 -rwsr-xr-x   1 root     root               59976 мар 14  2022 /usr/bin/passwd
+      301     72 -rwsr-xr-x   1 root     root               72072 мар 14  2022 /usr/bin/gpasswd
+      529     36 -rwsr-xr-x   1 root     root               35200 мар 23  2022 /usr/bin/fusermount3
+     1858    416 -rwsr-xr--   1 root     dip               424512 феб 24  2022 /usr/sbin/pppd
+find: ‘/proc/6532/task/6532/fd/6’: No such file or directory
+find: ‘/proc/6532/task/6532/fdinfo/6’: No such file or directory
+find: ‘/proc/6532/fd/5’: No such file or directory
+find: ‘/proc/6532/fdinfo/5’: No such file or directory
+find: ‘/run/user/1000/doc’: Permission denied
+find: ‘/run/user/1000/gvfs’: Permission denied
+find: ‘/run/user/127/gvfs’: Permission denied
+find: ‘/run/user/127/doc’: Permission denied
+find: ‘/home/vuk/shared-drives’: Permission denied

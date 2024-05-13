@@ -1,0 +1,4 @@
+/sys/kernel/security/apparmor/.remove
+/sys/kernel/security/apparmor/.replace
+/sys/kernel/security/apparmor/.load
+/sys/kernel/security/apparmor/.access

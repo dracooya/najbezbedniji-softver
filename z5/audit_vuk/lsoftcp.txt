@@ -1,0 +1,11 @@
+COMMAND    PID            USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+systemd-r  561 systemd-resolve   14u  IPv4  21855      0t0  TCP 127.0.0.53:53 (LISTEN)
+cupsd      681            root    6u  IPv6  26816      0t0  TCP [::1]:631 (LISTEN)
+cupsd      681            root    7u  IPv4  26817      0t0  TCP 127.0.0.1:631 (LISTEN)
+xrdp-sesm  700            root    7u  IPv6  19837      0t0  TCP [::1]:3350 (LISTEN)
+java      2335             vuk   53u  IPv6  31710      0t0  TCP 172.26.151.84:51986->199.232.16.215:443 (CLOSE_WAIT)
+java      2335             vuk   56u  IPv6  38457      0t0  TCP 172.26.151.84:51988->199.232.16.215:443 (CLOSE_WAIT)
+java      2335             vuk   57u  IPv6  40210      0t0  TCP 172.26.151.84:51990->199.232.16.215:443 (CLOSE_WAIT)
+java      2335             vuk   59u  IPv6  38458      0t0  TCP 172.26.151.84:51992->199.232.16.215:443 (CLOSE_WAIT)
+java      2335             vuk   61u  IPv6  35451      0t0  TCP 172.26.151.84:51994->199.232.16.215:443 (CLOSE_WAIT)
+java      2614             vuk   62u  IPv6  41298      0t0  TCP *:8080 (LISTEN)

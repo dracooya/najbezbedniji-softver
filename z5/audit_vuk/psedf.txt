@@ -1,0 +1,316 @@
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 20:16 ?        00:00:01 /sbin/init splash
+root           2       0  0 20:16 ?        00:00:00 [kthreadd]
+root           3       2  0 20:16 ?        00:00:00 [rcu_gp]
+root           4       2  0 20:16 ?        00:00:00 [rcu_par_gp]
+root           6       2  0 20:16 ?        00:00:00 [kworker/0:0H-events_highpri]
+root           7       2  0 20:16 ?        00:00:00 [kworker/0:1-events]
+root           9       2  0 20:16 ?        00:00:00 [mm_percpu_wq]
+root          10       2  0 20:16 ?        00:00:00 [rcu_tasks_rude_]
+root          11       2  0 20:16 ?        00:00:00 [rcu_tasks_trace]
+root          12       2  0 20:16 ?        00:00:00 [ksoftirqd/0]
+root          13       2  0 20:16 ?        00:00:00 [rcu_sched]
+root          14       2  0 20:16 ?        00:00:00 [migration/0]
+root          15       2  0 20:16 ?        00:00:00 [idle_inject/0]
+root          16       2  0 20:16 ?        00:00:00 [cpuhp/0]
+root          17       2  0 20:16 ?        00:00:00 [cpuhp/1]
+root          18       2  0 20:16 ?        00:00:00 [idle_inject/1]
+root          19       2  0 20:16 ?        00:00:00 [migration/1]
+root          20       2  0 20:16 ?        00:00:00 [ksoftirqd/1]
+root          22       2  0 20:16 ?        00:00:00 [kworker/1:0H-events_highpri]
+root          23       2  0 20:16 ?        00:00:00 [cpuhp/2]
+root          24       2  0 20:16 ?        00:00:00 [idle_inject/2]
+root          25       2  0 20:16 ?        00:00:00 [migration/2]
+root          26       2  0 20:16 ?        00:00:00 [ksoftirqd/2]
+root          28       2  0 20:16 ?        00:00:00 [kworker/2:0H-events_highpri]
+root          29       2  0 20:16 ?        00:00:00 [cpuhp/3]
+root          30       2  0 20:16 ?        00:00:00 [idle_inject/3]
+root          31       2  0 20:16 ?        00:00:00 [migration/3]
+root          32       2  0 20:16 ?        00:00:00 [ksoftirqd/3]
+root          34       2  0 20:16 ?        00:00:00 [kworker/3:0H-events_highpri]
+root          35       2  0 20:16 ?        00:00:00 [cpuhp/4]
+root          36       2  0 20:16 ?        00:00:00 [idle_inject/4]
+root          37       2  0 20:16 ?        00:00:00 [migration/4]
+root          38       2  0 20:16 ?        00:00:00 [ksoftirqd/4]
+root          40       2  0 20:16 ?        00:00:00 [kworker/4:0H-events_highpri]
+root          41       2  0 20:16 ?        00:00:00 [cpuhp/5]
+root          42       2  0 20:16 ?        00:00:00 [idle_inject/5]
+root          43       2  0 20:16 ?        00:00:00 [migration/5]
+root          44       2  0 20:16 ?        00:00:00 [ksoftirqd/5]
+root          46       2  0 20:16 ?        00:00:00 [kworker/5:0H-events_highpri]
+root          47       2  0 20:16 ?        00:00:00 [cpuhp/6]
+root          48       2  0 20:16 ?        00:00:00 [idle_inject/6]
+root          49       2  0 20:16 ?        00:00:00 [migration/6]
+root          50       2  0 20:16 ?        00:00:00 [ksoftirqd/6]
+root          52       2  0 20:16 ?        00:00:00 [kworker/6:0H-events_highpri]
+root          53       2  0 20:16 ?        00:00:00 [cpuhp/7]
+root          54       2  0 20:16 ?        00:00:00 [idle_inject/7]
+root          55       2  0 20:16 ?        00:00:00 [migration/7]
+root          56       2  0 20:16 ?        00:00:00 [ksoftirqd/7]
+root          58       2  0 20:16 ?        00:00:00 [kworker/7:0H-events_highpri]
+root          59       2  0 20:16 ?        00:00:00 [kdevtmpfs]
+root          60       2  0 20:16 ?        00:00:00 [netns]
+root          61       2  0 20:16 ?        00:00:00 [inet_frag_wq]
+root          62       2  0 20:16 ?        00:00:00 [kauditd]
+root          63       2  0 20:16 ?        00:00:00 [khungtaskd]
+root          64       2  0 20:16 ?        00:00:00 [oom_reaper]
+root          65       2  0 20:16 ?        00:00:00 [writeback]
+root          66       2  0 20:16 ?        00:00:00 [kcompactd0]
+root          67       2  0 20:16 ?        00:00:00 [ksmd]
+root          68       2  0 20:16 ?        00:00:00 [khugepaged]
+root          75       2  0 20:16 ?        00:00:00 [kworker/4:1-events]
+root         115       2  0 20:16 ?        00:00:00 [kintegrityd]
+root         116       2  0 20:16 ?        00:00:00 [kblockd]
+root         117       2  0 20:16 ?        00:00:00 [blkcg_punt_bio]
+root         118       2  0 20:16 ?        00:00:00 [kworker/2:1-events]
+root         119       2  0 20:16 ?        00:00:00 [tpm_dev_wq]
+root         120       2  0 20:16 ?        00:00:00 [ata_sff]
+root         121       2  0 20:16 ?        00:00:00 [md]
+root         122       2  0 20:16 ?        00:00:00 [edac-poller]
+root         123       2  0 20:16 ?        00:00:00 [devfreq_wq]
+root         124       2  0 20:16 ?        00:00:00 [watchdogd]
+root         125       2  0 20:16 ?        00:00:00 [kworker/5:1-events]
+root         127       2  0 20:16 ?        00:00:00 [kworker/0:1H-kblockd]
+root         129       2  0 20:16 ?        00:00:00 [kworker/6:1-cgroup_destroy]
+root         130       2  0 20:16 ?        00:00:00 [kswapd0]
+root         131       2  0 20:16 ?        00:00:00 [ecryptfs-kthrea]
+root         133       2  0 20:16 ?        00:00:00 [kthrotld]
+root         134       2  0 20:16 ?        00:00:00 [acpi_thermal_pm]
+root         136       2  0 20:16 ?        00:00:00 [vfio-irqfd-clea]
+root         137       2  0 20:16 ?        00:00:00 [mld]
+root         138       2  0 20:16 ?        00:00:00 [ipv6_addrconf]
+root         147       2  0 20:16 ?        00:00:00 [kstrp]
+root         148       2  0 20:16 ?        00:00:00 [kworker/1:1-events]
+root         149       2  0 20:16 ?        00:00:00 [kworker/7:1-inet_frag_wq]
+root         152       2  0 20:16 ?        00:00:00 [zswap-shrink]
+root         154       2  0 20:16 ?        00:00:00 [kworker/u17:0]
+root         161       2  0 20:16 ?        00:00:00 [charger_manager]
+root         183       2  0 20:16 ?        00:00:00 [kworker/2:1H-kblockd]
+root         199       2  0 20:16 ?        00:00:00 [kworker/6:1H-kblockd]
+root         209       2  0 20:16 ?        00:00:00 [kworker/4:1H-kblockd]
+root         210       2  0 20:16 ?        00:00:00 [cryptd]
+root         230       2  0 20:16 ?        00:00:00 [hv_vmbus_con]
+root         231       2  0 20:16 ?        00:00:00 [hv_pri_chan]
+root         232       2  0 20:16 ?        00:00:00 [hv_sub_chan]
+root         235       2  0 20:16 ?        00:00:00 [scsi_eh_0]
+root         236       2  0 20:16 ?        00:00:00 [scsi_tmf_0]
+root         237       2  0 20:16 ?        00:00:00 [storvsc_error_w]
+root         240       2  0 20:16 ?        00:00:00 [kworker/2:2-cgroup_destroy]
+root         245       2  0 20:16 ?        00:00:00 [kworker/7:1H-kblockd]
+root         318       2  0 20:16 ?        00:00:00 [jbd2/sda1-8]
+root         319       2  0 20:16 ?        00:00:00 [ext4-rsv-conver]
+root         337       2  0 20:16 ?        00:00:00 [kworker/5:1H-kblockd]
+root         371       1  0 20:16 ?        00:00:00 /lib/systemd/systemd-journald
+root         402       2  0 20:16 ?        00:00:00 [ipmi-msghandler]
+root         404       1  0 20:16 ?        00:00:00 /lib/systemd/systemd-udevd
+root         419       2  0 20:16 ?        00:00:00 [kworker/3:1H-kblockd]
+root         449       2  0 20:16 ?        00:00:00 [kworker/1:1H-kblockd]
+root         450       2  0 20:16 ?        00:00:00 [kworker/7:2-events]
+root         451       2  0 20:16 ?        00:00:00 [hv_balloon]
+root         486       2  0 20:16 ?        00:00:01 [kworker/u16:6-flush-8:0]
+systemd+     557       1  0 20:16 ?        00:00:02 /lib/systemd/systemd-oomd
+systemd+     561       1  0 20:16 ?        00:00:00 /lib/systemd/systemd-resolved
+root         587       1  0 20:16 ?        00:00:00 /usr/sbin/acpid
+avahi        590       1  0 20:16 ?        00:00:00 avahi-daemon: running [vuk.local]
+message+     591       1  0 20:16 ?        00:00:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         592       1  0 20:16 ?        00:00:00 /usr/sbin/NetworkManager --no-daemon
+root         601       1  0 20:16 ?        00:00:00 /usr/sbin/irqbalance --foreground
+root         604       1  0 20:16 ?        00:00:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         606       1  0 20:16 ?        00:00:00 /usr/libexec/polkitd --no-debug
+root         611       1  0 20:16 ?        00:00:00 /usr/libexec/power-profiles-daemon
+syslog       612       1  0 20:16 ?        00:00:00 /usr/sbin/rsyslogd -n -iNONE
+root         618       1  0 20:16 ?        00:00:00 /usr/lib/snapd/snapd
+root         620       1  0 20:16 ?        00:00:00 /usr/libexec/accounts-daemon
+root         622       1  0 20:16 ?        00:00:00 /usr/sbin/cron -f -P
+root         623       1  0 20:16 ?        00:00:00 /usr/libexec/switcheroo-control
+root         624       1  0 20:16 ?        00:00:00 /lib/systemd/systemd-logind
+root         626       1  0 20:16 ?        00:00:00 /usr/libexec/udisks2/udisksd
+root         627       1  0 20:16 ?        00:00:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+avahi        638     590  0 20:16 ?        00:00:00 avahi-daemon: chroot helper
+root         681       1  0 20:16 ?        00:00:00 /usr/sbin/cupsd -l
+root         684       1  0 20:16 ?        00:00:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         689       1  0 20:16 ?        00:00:00 /usr/sbin/ModemManager
+root         700       1  0 20:16 ?        00:00:00 /usr/sbin/xrdp-sesman
+root         728       1  0 20:16 ?        00:00:00 /usr/sbin/gdm3
+xrdp         731       1  0 20:16 ?        00:00:00 /usr/sbin/xrdp
+root         759       1  0 20:16 ?        00:00:00 /usr/sbin/cups-browsed
+kernoops     765       1  0 20:16 ?        00:00:00 /usr/sbin/kerneloops --test
+kernoops     767       1  0 20:16 ?        00:00:00 /usr/sbin/kerneloops
+root         830     728  0 20:16 ?        00:00:00 gdm-session-worker [pam/gdm-launch-environment]
+gdm          835       1  0 20:16 ?        00:00:00 /lib/systemd/systemd --user
+gdm          836     835  0 20:16 ?        00:00:00 (sd-pam)
+gdm          842     835  0 20:16 ?        00:00:00 /usr/bin/pipewire
+gdm          843     835  0 20:16 ?        00:00:00 /usr/bin/pipewire-media-session
+gdm          844     835  0 20:16 ?        00:00:00 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+gdm          852     830  0 20:16 tty1     00:00:00 /usr/libexec/gdm-wayland-session dbus-run-session -- gnome-session --autostart /usr/share/gdm/greeter/autostart
+gdm          860     835  0 20:16 ?        00:00:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+rtkit        865       1  0 20:16 ?        00:00:00 /usr/libexec/rtkit-daemon
+gdm          871     852  0 20:16 tty1     00:00:00 dbus-run-session -- gnome-session --autostart /usr/share/gdm/greeter/autostart
+gdm          872     835  0 20:16 ?        00:00:00 /usr/libexec/gvfsd
+gdm          873     871  0 20:16 tty1     00:00:00 dbus-daemon --nofork --print-address 4 --session
+gdm          874     835  0 20:16 ?        00:00:00 /usr/libexec/xdg-document-portal
+gdm          875     871  0 20:16 tty1     00:00:00 /usr/libexec/gnome-session-binary --autostart /usr/share/gdm/greeter/autostart
+gdm          880     835  0 20:16 ?        00:00:00 /usr/libexec/xdg-permission-store
+root         887     874  0 20:16 ?        00:00:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/127/doc
+gdm          896     835  0 20:16 ?        00:00:00 /usr/libexec/gvfsd-fuse /run/user/127/gvfs -f
+gdm          918     875  0 20:16 tty1     00:00:05 /usr/bin/gnome-shell
+gdm          930     835  0 20:16 ?        00:00:00 /usr/libexec/tracker-miner-fs-3
+gdm          936     835  0 20:16 ?        00:00:00 /usr/libexec/gvfs-udisks2-volume-monitor
+gdm          941     835  0 20:16 ?        00:00:00 /usr/libexec/gvfs-afc-volume-monitor
+gdm          952     835  0 20:16 ?        00:00:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+gdm          964     835  0 20:16 ?        00:00:00 /usr/libexec/gvfs-goa-volume-monitor
+gdm          977     835  0 20:16 ?        00:00:00 /usr/libexec/goa-daemon
+gdm          984     835  0 20:16 ?        00:00:00 /usr/libexec/goa-identity-service
+gdm          987     835  0 20:16 ?        00:00:00 /usr/libexec/gvfs-mtp-volume-monitor
+root         994       1  0 20:16 ?        00:00:00 /usr/libexec/upowerd
+gdm         1044       1  0 20:16 tty1     00:00:00 /usr/libexec/at-spi-bus-launcher
+gdm         1049    1044  0 20:16 tty1     00:00:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/127/at-spi/bus
+gdm         1060     918  0 20:16 tty1     00:00:00 /usr/bin/Xwayland :1024 -rootless -noreset -accessx -core -auth /run/user/127/.mutter-Xwaylandauth.R7WRN2 -listen 4 -listen 5 -displayfd 6 -initfd 7
+gdm         1084       1  0 20:16 tty1     00:00:00 /usr/libexec/xdg-permission-store
+root        1114       1  0 20:16 ?        00:00:00 /usr/libexec/packagekitd
+gdm         1119       1  0 20:16 tty1     00:00:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+gdm         1121       1  0 20:16 tty1     00:00:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+gdm         1137     875  0 20:16 tty1     00:00:00 /usr/libexec/gsd-sharing
+gdm         1139     875  0 20:16 tty1     00:00:00 /usr/libexec/gsd-wacom
+gdm         1141     875  0 20:16 tty1     00:00:00 /usr/libexec/gsd-color
+gdm         1142     875  0 20:16 tty1     00:00:00 /usr/libexec/gsd-keyboard
+gdm         1147     875  0 20:16 tty1     00:00:00 /usr/libexec/gsd-print-notifications
+gdm         1149     875  0 20:16 tty1     00:00:00 /usr/libexec/gsd-rfkill
+gdm         1150     875  0 20:16 tty1     00:00:00 /usr/libexec/gsd-smartcard
+gdm         1151     875  0 20:16 tty1     00:00:00 /usr/libexec/gsd-datetime
+gdm         1157     875  0 20:16 tty1     00:00:00 /usr/libexec/gsd-media-keys
+gdm         1159     875  0 20:16 tty1     00:00:00 /usr/libexec/gsd-screensaver-proxy
+gdm         1161     875  0 20:16 tty1     00:00:00 /usr/libexec/gsd-sound
+gdm         1167     875  0 20:16 tty1     00:00:00 /usr/libexec/gsd-a11y-settings
+gdm         1172     875  0 20:16 tty1     00:00:00 /usr/libexec/gsd-housekeeping
+gdm         1177     875  0 20:16 tty1     00:00:00 /usr/libexec/gsd-power
+gdm         1233       1  0 20:16 tty1     00:00:00 /usr/libexec/gsd-printer
+colord      1257       1  0 20:16 ?        00:00:00 /usr/libexec/colord
+gdm         1277       1  0 20:16 tty1     00:00:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.ScreenSaver
+gdm         1303       1  0 20:16 tty1     00:00:00 dbus-launch --autolaunch=d80e7ea4ad89434cbadb83041b62bff7 --binary-syntax --close-stderr
+gdm         1304       1  0 20:16 ?        00:00:00 /usr/bin/dbus-daemon --syslog-only --fork --print-pid 5 --print-address 7 --session
+gdm         1313       1  0 20:16 ?        00:00:00 /usr/libexec/at-spi-bus-launcher
+gdm         1318    1313  0 20:16 ?        00:00:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/var/lib/gdm3/.cache/at-spi/bus_1025
+xrdp        1325     731  0 20:16 ?        00:00:29 /usr/sbin/xrdp
+root        1335       2  0 20:17 ?        00:00:00 [kworker/3:2-events]
+root        1338     700  0 20:17 ?        00:00:00 /usr/sbin/xrdp-sesman
+vuk         1340       1  0 20:17 ?        00:00:00 /lib/systemd/systemd --user
+vuk         1341    1340  0 20:17 ?        00:00:00 (sd-pam)
+vuk         1347    1340  0 20:17 ?        00:00:00 /usr/bin/pipewire
+vuk         1348    1340  0 20:17 ?        00:00:00 /usr/bin/pipewire-media-session
+vuk         1349    1340  0 20:17 ?        00:00:00 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+vuk         1357    1338  0 20:17 ?        00:00:00 /usr/libexec/gnome-session-binary
+vuk         1359    1338  0 20:17 ?        00:00:23 /usr/lib/xorg/Xorg :10 -auth .Xauthority -config xrdp/xorg.conf -noreset -nolisten tcp -logfile .xorgxrdp.%s.log
+vuk         1368    1340  0 20:17 ?        00:00:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+vuk         1370    1340  0 20:17 ?        00:00:00 /usr/libexec/gvfsd
+vuk         1371    1340  0 20:17 ?        00:00:00 /usr/libexec/xdg-document-portal
+vuk         1376    1340  0 20:17 ?        00:00:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+vuk         1381    1340  0 20:17 ?        00:00:00 /usr/libexec/xdg-permission-store
+root        1391    1371  0 20:17 ?        00:00:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+vuk         1410    1340  0 20:17 ?        00:00:00 /usr/libexec/tracker-miner-fs-3
+vuk         1422    1340  0 20:17 ?        00:00:00 /usr/libexec/gvfs-udisks2-volume-monitor
+vuk         1428    1340  0 20:17 ?        00:00:00 /usr/libexec/gvfs-afc-volume-monitor
+vuk         1434    1340  0 20:17 ?        00:00:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+vuk         1441    1340  0 20:17 ?        00:00:00 /usr/libexec/gvfs-goa-volume-monitor
+vuk         1445    1340  0 20:17 ?        00:00:00 /usr/libexec/goa-daemon
+vuk         1460    1340  0 20:17 ?        00:00:00 /usr/libexec/goa-identity-service
+vuk         1466    1340  0 20:17 ?        00:00:00 /usr/libexec/gvfs-mtp-volume-monitor
+vuk         1476    1338  0 20:17 ?        00:00:00 /usr/sbin/xrdp-chansrv
+vuk         1564    1357  0 20:17 ?        00:00:00 /usr/bin/ssh-agent /usr/bin/im-launch x-session-manager
+vuk         1582    1340  0 20:17 ?        00:00:00 /usr/libexec/at-spi-bus-launcher
+vuk         1589    1582  0 20:17 ?        00:00:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/1000/at-spi/bus_10.0
+vuk         1631    1340  0 20:17 ?        00:00:00 /usr/libexec/gnome-remote-desktop-daemon
+vuk         1632    1340  0 20:17 ?        00:00:00 /usr/libexec/gnome-session-ctl --monitor
+vuk         1644    1340  0 20:17 ?        00:00:00 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+vuk         1661    1340  0 20:17 ?        00:00:00 /usr/bin/gnome-keyring-daemon --start --components=ssh
+vuk         1676    1340  2 20:17 ?        00:01:15 /usr/bin/gnome-shell
+vuk         1712    1340  0 20:17 ?        00:00:00 /snap/snapd-desktop-integration/10/bin/snapd-desktop-integration
+vuk         1788    1340  0 20:17 ?        00:00:00 /usr/libexec/gnome-shell-calendar-server
+vuk         1795    1340  0 20:17 ?        00:00:00 /usr/libexec/evolution-source-registry
+vuk         1804    1340  0 20:17 ?        00:00:00 /usr/libexec/evolution-calendar-factory
+vuk         1812    1340  0 20:17 ?        00:00:00 /usr/libexec/dconf-service
+vuk         1818    1340  0 20:17 ?        00:00:00 /usr/libexec/evolution-addressbook-factory
+vuk         1831    1370  0 20:17 ?        00:00:00 /usr/libexec/gvfsd-trash --spawner :1.3 /org/gtk/gvfs/exec_spaw/0
+vuk         1840    1340  0 20:17 ?        00:00:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+vuk         1842    1340  0 20:17 ?        00:00:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+vuk         1861    1340  0 20:17 ?        00:00:00 sh -c /usr/bin/ibus-daemon --panel disable $([ "$XDG_SESSION_TYPE" = "x11" ] && echo "--xim")
+vuk         1863    1340  0 20:17 ?        00:00:00 /usr/libexec/gsd-a11y-settings
+vuk         1864    1861  0 20:17 ?        00:00:04 /usr/bin/ibus-daemon --panel disable --xim
+vuk         1866    1340  0 20:17 ?        00:00:00 /usr/libexec/gsd-color
+vuk         1868    1340  0 20:17 ?        00:00:00 /usr/libexec/gsd-datetime
+vuk         1870    1340  0 20:17 ?        00:00:00 /usr/libexec/gsd-housekeeping
+vuk         1872    1340  0 20:17 ?        00:00:00 /usr/libexec/gsd-keyboard
+vuk         1874    1340  0 20:17 ?        00:00:00 /usr/libexec/gsd-media-keys
+vuk         1879    1340  0 20:17 ?        00:00:00 /usr/libexec/gsd-power
+vuk         1880    1340  0 20:17 ?        00:00:00 /usr/libexec/gsd-print-notifications
+vuk         1881    1340  0 20:17 ?        00:00:00 /usr/libexec/gsd-rfkill
+vuk         1886    1340  0 20:17 ?        00:00:00 /usr/libexec/gsd-screensaver-proxy
+vuk         1889    1340  0 20:17 ?        00:00:00 /usr/libexec/gsd-sharing
+vuk         1890    1340  0 20:17 ?        00:00:00 /usr/libexec/gsd-smartcard
+vuk         1893    1340  0 20:17 ?        00:00:00 /usr/libexec/gsd-sound
+vuk         1905    1340  0 20:17 ?        00:00:00 /usr/libexec/gsd-wacom
+vuk         1906    1644  0 20:17 ?        00:00:00 /usr/libexec/gsd-disk-utility-notify
+vuk         1910    1340  0 20:17 ?        00:00:00 /usr/libexec/gsd-xsettings
+vuk         1926    1340  0 20:17 ?        00:00:00 /usr/libexec/xdg-desktop-portal
+vuk         1927    1644  0 20:17 ?        00:00:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+vuk         1933    1864  0 20:17 ?        00:00:00 /usr/libexec/ibus-memconf
+vuk         1935    1864  0 20:17 ?        00:00:01 /usr/libexec/ibus-extension-gtk3
+vuk         1949    1340  0 20:17 ?        00:00:00 /usr/libexec/ibus-x11 --kill-daemon
+vuk         1961    1340  0 20:17 ?        00:00:00 /usr/libexec/xdg-desktop-portal-gnome
+vuk         1963    1340  0 20:17 ?        00:00:00 /usr/libexec/ibus-portal
+vuk         2015    1340  0 20:17 ?        00:00:00 /usr/libexec/gsd-printer
+vuk         2062    1864  0 20:17 ?        00:00:01 /usr/libexec/ibus-engine-simple
+vuk         2067    1340  0 20:17 ?        00:00:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.ScreenSaver
+vuk         2105    1340  0 20:17 ?        00:00:00 /usr/libexec/xdg-desktop-portal-gtk
+vuk         2116    1676  0 20:17 ?        00:00:00 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com -M 0 -D 0:0:1364:768:1:27:0:0:0:0
+vuk         2136    1340  0 20:17 ?        00:00:00 /usr/libexec/gvfsd-metadata
+root        2156       2  0 20:17 ?        00:00:00 [kworker/1:3-events]
+vuk         2161    1340  0 20:18 ?        00:00:07 /usr/bin/nautilus --gapplication-service
+vuk         2214    1644  0 20:18 ?        00:00:00 update-notifier
+vuk         2227    1340  0 20:18 ?        00:00:12 /usr/libexec/gnome-terminal-server
+vuk         2249    2227  0 20:18 pts/0    00:00:00 bash
+vuk         2335    2249  0 20:18 pts/0    00:00:17 /usr/bin/java -classpath /usr/share/maven/boot/plexus-classworlds-2.x.jar -Dclassworlds.conf=/usr/share/maven/bin/m2.conf -Dmaven.home=/usr/share/maven -Dlibrary.jansi.path=/usr/share/maven/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/vuk/Desktop/2/demo org.codehaus.plexus.classworlds.launcher.Launcher spring-boot:run
+vuk         2614    2335  0 20:18 pts/0    00:00:08 /usr/lib/jvm/java-21-openjdk-amd64/bin/java -XX:TieredStopAtLevel=1 -cp /home/vuk/Desktop/2/demo/target/classes:/home/vuk/.m2/repository/org/springframework/boot/spring-boot/3.2.5/spring-boot-3.2.5.jar:/home/vuk/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.5/spring-boot-autoconfigure-3.2.5.jar:/home/vuk/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/home/vuk/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/home/vuk/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/home/vuk/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/home/vuk/.m2/repository/org/slf4j/jul-to-slf4j/2.0.13/jul-to-slf4j-2.0.13.jar:/home/vuk/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/vuk/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/home/vuk/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.4/jackson-databind-2.15.4.jar:/home/vuk/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.4/jackson-annotations-2.15.4.jar:/home/vuk/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.4/jackson-core-2.15.4.jar:/home/vuk/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.4/jackson-datatype-jdk8-2.15.4.jar:/home/vuk/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.4/jackson-datatype-jsr310-2.15.4.jar:/home/vuk/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.4/jackson-module-parameter-names-2.15.4.jar:/home/vuk/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.20/tomcat-embed-core-10.1.20.jar:/home/vuk/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.20/tomcat-embed-el-10.1.20.jar:/home/vuk/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.20/tomcat-embed-websocket-10.1.20.jar:/home/vuk/.m2/repository/org/springframework/spring-web/6.1.6/spring-web-6.1.6.jar:/home/vuk/.m2/repository/org/springframework/spring-beans/6.1.6/spring-beans-6.1.6.jar:/home/vuk/.m2/repository/io/micrometer/micrometer-observation/1.12.5/micrometer-observation-1.12.5.jar:/home/vuk/.m2/repository/io/micrometer/micrometer-commons/1.12.5/micrometer-commons-1.12.5.jar:/home/vuk/.m2/repository/org/springframework/spring-webmvc/6.1.6/spring-webmvc-6.1.6.jar:/home/vuk/.m2/repository/org/springframework/spring-aop/6.1.6/spring-aop-6.1.6.jar:/home/vuk/.m2/repository/org/springframework/spring-context/6.1.6/spring-context-6.1.6.jar:/home/vuk/.m2/repository/org/springframework/spring-expression/6.1.6/spring-expression-6.1.6.jar:/home/vuk/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/home/vuk/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/home/vuk/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/home/vuk/.m2/repository/net/bytebuddy/byte-buddy/1.14.13/byte-buddy-1.14.13.jar:/home/vuk/.m2/repository/org/springframework/spring-core/6.1.6/spring-core-6.1.6.jar:/home/vuk/.m2/repository/org/springframework/spring-jcl/6.1.6/spring-jcl-6.1.6.jar:/home/vuk/.m2/repository/org/aspectj/aspectjweaver/1.9.22/aspectjweaver-1.9.22.jar:/home/vuk/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/home/vuk/.m2/repository/org/springframework/spring-jdbc/6.1.6/spring-jdbc-6.1.6.jar:/home/vuk/.m2/repository/org/hibernate/orm/hibernate-core/6.4.4.Final/hibernate-core-6.4.4.Final.jar:/home/vuk/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/vuk/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/vuk/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/home/vuk/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/home/vuk/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/home/vuk/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/home/vuk/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/home/vuk/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/home/vuk/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/home/vuk/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/home/vuk/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/vuk/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/vuk/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/home/vuk/.m2/repository/org/springframework/data/spring-data-jpa/3.2.5/spring-data-jpa-3.2.5.jar:/home/vuk/.m2/repository/org/springframework/data/spring-data-commons/3.2.5/spring-data-commons-3.2.5.jar:/home/vuk/.m2/repository/org/springframework/spring-orm/6.1.6/spring-orm-6.1.6.jar:/home/vuk/.m2/repository/org/springframework/spring-tx/6.1.6/spring-tx-6.1.6.jar:/home/vuk/.m2/repository/org/springframework/spring-aspects/6.1.6/spring-aspects-6.1.6.jar:/home/vuk/.m2/repository/com/h2database/h2/2.2.224/h2-2.2.224.jar com.example.demo.DemoApplication
+vuk         2936    1340  0 20:18 ?        00:00:00 /usr/bin/snap userd
+vuk         3716    2116  0 20:22 ?        00:00:00 /usr/bin/python3 /usr/bin/gnome-terminal --wait
+vuk         3717    3716  0 20:22 ?        00:00:00 /usr/bin/gnome-terminal.real --wait
+vuk         3721    2227  0 20:22 pts/1    00:00:00 bash
+root        3728    3721  0 20:22 pts/1    00:00:00 sudo -s
+root        3730    3728  0 20:23 pts/2    00:00:00 sudo -s
+root        3731    3730  0 20:23 pts/2    00:00:00 /bin/bash
+root        4311    3731  0 20:25 pts/2    00:00:00 screen
+root        4312    4311  0 20:25 ?        00:00:00 SCREEN
+root        4313    4312  0 20:25 pts/3    00:00:00 /bin/bash
+root        4330    4312  0 20:25 pts/4    00:00:00 /bin/bash
+root        4338    4312  0 20:25 pts/5    00:00:00 /bin/bash
+root        4670       2  0 20:32 ?        00:00:00 [kworker/5:0-events]
+root        4801       2  0 20:35 ?        00:00:00 [kworker/3:0-events]
+ntp         5050       1  0 20:35 ?        00:00:00 /usr/sbin/ntpd -p /var/run/ntpd.pid -g -u 129:138
+root        5676    4330  0 20:37 pts/4    00:00:00 less
+vuk         6449    1370  0 20:49 ?        00:00:00 /usr/libexec/gvfsd-network --spawner :1.3 /org/gtk/gvfs/exec_spaw/1
+vuk         6464    1370  0 20:49 ?        00:00:00 /usr/libexec/gvfsd-dnssd --spawner :1.3 /org/gtk/gvfs/exec_spaw/3
+root        6474       2  0 20:49 ?        00:00:00 [kworker/u16:1-flush-8:0]
+root        6481       2  0 20:49 ?        00:00:00 [kworker/4:2]
+root        6482       2  0 20:49 ?        00:00:00 [kworker/6:0-events]
+vuk         6497    2116  0 20:52 ?        00:00:00 /usr/bin/python3 /usr/bin/gnome-terminal --wait
+vuk         6498    6497  0 20:52 ?        00:00:00 /usr/bin/gnome-terminal.real --wait
+vuk         6502    2227  0 20:52 pts/6    00:00:00 bash
+root        6510    6502  0 20:52 pts/6    00:00:00 sudo -s
+root        6511    6510  0 20:52 pts/7    00:00:00 sudo -s
+root        6512    6511  0 20:52 pts/7    00:00:00 /bin/bash
+root        7229       2  0 21:04 ?        00:00:00 [kworker/u16:0-events_unbound]
+root        7513       2  0 21:07 ?        00:00:00 [kworker/0:2-events]
+root        7531       2  0 21:13 ?        00:00:00 [kworker/u16:2-events_unbound]
+root        7554       2  0 21:13 ?        00:00:00 [kworker/7:0-events]
+root        7555       2  0 21:13 ?        00:00:00 [kworker/2:0]
+root        7556       2  0 21:13 ?        00:00:00 [kworker/3:1]
+vuk         7557    1676 15 21:13 ?        00:00:06 /snap/firefox/1300/usr/lib/firefox/firefox
+vuk         7724    7557  0 21:13 ?        00:00:00 /snap/firefox/1300/usr/lib/firefox/firefox -contentproc -parentBuildID 20220502141216 -prefsLen 1 -prefMapSize 256280 -appDir /snap/firefox/1300/usr/lib/firefox/browser 7557 true socket
+vuk         7752    7557  1 21:13 ?        00:00:00 /snap/firefox/1300/usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 139 -prefMapSize 256280 -jsInitLen 277212 -parentBuildID 20220502141216 -appDir /snap/firefox/1300/usr/lib/firefox/browser 7557 true tab
+vuk         8123    7557  0 21:13 ?        00:00:00 /snap/firefox/1300/usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 4697 -prefMapSize 256280 -jsInitLen 277212 -parentBuildID 20220502141216 -appDir /snap/firefox/1300/usr/lib/firefox/browser 7557 true tab
+vuk         8509    7557  0 21:13 ?        00:00:00 /snap/firefox/1300/usr/lib/firefox/firefox -contentproc -childID 3 -isForBrowser -prefsLen 5332 -prefMapSize 256280 -jsInitLen 277212 -parentBuildID 20220502141216 -appDir /snap/firefox/1300/usr/lib/firefox/browser 7557 true tab
+vuk         8513    7557  0 21:13 ?        00:00:00 /snap/firefox/1300/usr/lib/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 5332 -prefMapSize 256280 -jsInitLen 277212 -parentBuildID 20220502141216 -appDir /snap/firefox/1300/usr/lib/firefox/browser 7557 true tab
+vuk         8555    7557  0 21:13 ?        00:00:00 /snap/firefox/1300/usr/lib/firefox/firefox -contentproc -childID 5 -isForBrowser -prefsLen 5332 -prefMapSize 256280 -jsInitLen 277212 -parentBuildID 20220502141216 -appDir /snap/firefox/1300/usr/lib/firefox/browser 7557 true tab
+root        8581       2  0 21:13 ?        00:00:00 [kworker/0:0]
+vuk         8591    7557  0 21:13 ?        00:00:00 /snap/firefox/1300/usr/lib/firefox/firefox -contentproc -childID 6 -isForBrowser -prefsLen 7731 -prefMapSize 256280 -jsInitLen 277212 -parentBuildID 20220502141216 -appDir /snap/firefox/1300/usr/lib/firefox/browser 7557 true tab
+root        8623    4330  0 21:14 pts/4    00:00:00 ps -edf

@@ -1,0 +1,6 @@
+message+     591       1  0 20:16 ?        00:00:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+syslog       612       1  0 20:16 ?        00:00:00 /usr/sbin/rsyslogd -n -iNONE
+gdm          860     835  0 20:16 ?        00:00:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+gdm         1304       1  0 20:16 ?        00:00:00 /usr/bin/dbus-daemon --syslog-only --fork --print-pid 5 --print-address 7 --session
+vuk         1368    1340  0 20:17 ?        00:00:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root        5682    4330  0 20:39 pts/4    00:00:00 grep --color=auto syslog
