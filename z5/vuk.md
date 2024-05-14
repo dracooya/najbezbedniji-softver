@@ -9,6 +9,8 @@
   vulnerabilities se nalaze na linku:
   [<u>https://www.cvedetails.com/vulnerability-list/vendor_id-33/product_id-47/version_id-680074/Linux-Linux-Kernel-5.15.html</u>](https://www.cvedetails.com/vulnerability-list/vendor_id-33/product_id-47/version_id-680074/Linux-Linux-Kernel-5.15.html)
 
+- Korišćen algoritam za kriptovanje šifri je yescrypt, koji nije moguće dekriptovati bez Kali OS-a
+
 - Uptime je bio nizak označavajući da nije bilo mogućnosti da su se novi
   vulnerabilties zakrpili u međuvremenu
 
