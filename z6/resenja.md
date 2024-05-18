@@ -41,3 +41,27 @@ Konačna šifra je **18/05/1960Dragutin18/05/20051999.** Sadržaj arhive i
 rešenje zadatka je dato na slici ispod (**UNS{V3RY_OLD_4RCH1V3}**).
 
 ![](gotu.png)
+
+## Zadatak 6 - Pixel perfect
+
+-   Kolega koji voli da fotografiše je ostavio sliku rekavši da želi da mi kaže nešto bitno. Od tada ga nema.
+
+-   Na slici je prikazan PMF, a reverse image search nas vodi do originalne slike
+
+-   Zaključujemo da je naš kolega upisao PMF i da je rešenje UNS{PMF}
+
+-   Na njoj vidimo i da je autor slike Marko Gordić 2022.
+
+-   Ulaženjem na profil Marka Gordića i gledajući slike koje je postavljao u skorije vreme, vidimo da je naš kolega sada u Norveškoj
+
+-   Nadajmo se da mu je tamo lepo
+
+## Zadatak 7 - The Queen of the Ocean
+
+-   Kraljica okeana je 2020. uhvaćena i tagovana. Zanima nas kada je poslednji put pingovana.
+
+-   Google search za "Queen of the ocean captured 2020" daje nam yahoo news vest o hvatanju 50 godina stare velike bele ajkule <https://sg.news.yahoo.com/50-old-great-white-shark-082339136.html?guccounter=1>
+
+-   U toj vesti se pominje da je njeno ime Nukumi, a pretragom za Nukumi dolazimo do sajta na kojem možemo videti put koji je ajkula prešla plivajući u okeanu kao i njen poslednji ping <https://www.ocearch.org/tracker/detail/nukumi> 
+
+-   Poslednji tag i rešenje jeste RC15{Apr 11, 2021, 3:03:07 PM}
