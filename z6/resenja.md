@@ -65,3 +65,11 @@ rešenje zadatka je dato na slici ispod (**UNS{V3RY_OLD_4RCH1V3}**).
 -   U toj vesti se pominje da je njeno ime Nukumi, a pretragom za Nukumi dolazimo do sajta na kojem možemo videti put koji je ajkula prešla plivajući u okeanu kao i njen poslednji ping <https://www.ocearch.org/tracker/detail/nukumi> 
 
 -   Poslednji tag i rešenje jeste RC15{Apr 11, 2021, 3:03:07 PM}
+
+## Zadatak 8 - Squid Game Invitation
+
+-   Pretragom korisničkog imena squidgameph1337 na github-u pronalazimo korisnika sa jednim javnim repozitoriumom <https://github.com/squidgameph1337>
+  
+-   U tom repozitorijumu se nalazi jednostavna web aplikacija koja na index.html stranici sadrži traženi flag
+  
+-   NAVY{h4v3_y0u_3v3r_w4tched_!t?}
