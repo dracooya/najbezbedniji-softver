@@ -70,6 +70,18 @@ rešenje zadatka je dato na slici ispod (**UNS{V3RY_OLD_4RCH1V3}**).
 
 -   Pretragom korisničkog imena squidgameph1337 na github-u pronalazimo korisnika sa jednim javnim repozitoriumom <https://github.com/squidgameph1337>
   
--   U tom repozitorijumu se nalazi jednostavna web aplikacija koja na index.html stranici sadrži traženi flag
+-   U tom repozitorijumu se nalazi jednostavna web aplikacija koja na index.html stranici sadrži traženi flag.
+  
+-   NAVY{h4v3_y0u_3v3r_w4tched_!t?}
+
+## Zadatak 9 - Maps OSINT 1
+
+-   Na slici se nalazi znak koji spominje spomen kuću Save Šumanovića.
+  
+-   Google search za "Spomen kuća Save Šumanovića", pa odlazak na mape nam daje lokaciju u Šidu.
+
+-   Pored toga, vidimo znak Tehnometal, ako pretražimo to na mapama, pronalazimo lokaciju sa slike.
+
+-   Uzimajući lokaciju pronađenog mesta dobijamo flag UNS{45.126709912299674, 19.229716667853022}
   
 -   NAVY{h4v3_y0u_3v3r_w4tched_!t?}
