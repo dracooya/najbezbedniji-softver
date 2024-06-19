@@ -1,5 +1,7 @@
 package rs.ac.uns.ftn.minizanzibar.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
@@ -16,12 +18,15 @@ import java.util.logging.Logger;
 public class AuthorizationController {
     private final AuthorizationService authorizationService;
     private final Logger logger = Logger.getLogger(AuthorizationController.class.getName());
+    private final ObjectMapper objectMapper;
 
-    public AuthorizationController(AuthorizationService authorizationService) {
+    public AuthorizationController(AuthorizationService authorizationService,
+                                   ObjectMapper objectMapper) {
         this.authorizationService = authorizationService;
+        this.objectMapper = objectMapper;
     }
 
-    @PutMapping(consumes = "application/json")
+    @PostMapping(consumes = "application/json")
     public ResponseEntity<?> saveRelation(@RequestBody AclDTO aclDTO) {
         authorizationService.setRelation(aclDTO);
         return ResponseEntity.ok().build();
@@ -37,14 +42,19 @@ public class AuthorizationController {
     }
 
 
-    @PutMapping(value = "/namespace/{namespace}", consumes = "application/json")
+    @PostMapping(value = "/namespace/{namespace}", consumes = "application/json")
     public ResponseEntity<?> saveNamespaceConfig(@PathVariable String namespace,
                                                  @Valid @RequestBody NamespaceConfig config) throws ConstraintViolationException {
         logger.info("Namespace: " + namespace + ", config: " + config.getRelations().toString());
-        if (authorizationService.saveNamespaceConfig(namespace, config.getRelations().toString())) {
-            return ResponseEntity.ok().build();
-        } else {
-            return ResponseEntity.badRequest().build();
+        try {
+            if (authorizationService.saveNamespaceConfig(namespace, objectMapper.writeValueAsString(config.getRelations()))) {
+                return ResponseEntity.ok().build();
+            } else {
+                return ResponseEntity.badRequest().build();
+            }
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            return ResponseEntity.internalServerError().build();
         }
     }
 

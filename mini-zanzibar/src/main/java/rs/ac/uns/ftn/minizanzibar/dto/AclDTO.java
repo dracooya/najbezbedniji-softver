@@ -12,7 +12,7 @@ public class AclDTO {
     private String relation;
     private String object;
 
-    public String getLevelDBEntry() {
-        return user + "-" + relation + "-" + object;
+    public String getLevelDBKey() {
+        return user + "-" + object;
     }
 }
