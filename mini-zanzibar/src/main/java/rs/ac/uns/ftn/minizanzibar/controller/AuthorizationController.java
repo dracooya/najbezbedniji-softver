@@ -27,7 +27,7 @@ public class AuthorizationController {
     }
 
     @PostMapping(consumes = "application/json")
-    public ResponseEntity<?> saveRelation(@RequestBody AclDTO aclDTO) {
+    public ResponseEntity<?> saveRelation(@RequestBody @Valid AclDTO aclDTO) {
         authorizationService.setRelation(aclDTO);
         return ResponseEntity.ok().build();
     }

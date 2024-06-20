@@ -47,12 +47,4 @@ public class GlobalExceptionHandler {
         errors.put("message", e.getMessage());
         return ResponseEntity.badRequest().body(errors);
     }
-
-    @ExceptionHandler(InternalException.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public ResponseEntity<Map<String, String>> handleInternalException(InternalException e) {
-        Map<String, String> errors = new HashMap<>();
-        errors.put("message", e.getMessage());
-        return ResponseEntity.internalServerError().body(errors);
-    }
 }
