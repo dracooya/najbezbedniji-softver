@@ -58,6 +58,7 @@ public class AuthorizationController {
         }
     }
 
+    // For demo purposes
     @GetMapping("/namespace/{namespace}")
     public ResponseEntity<?> getNamespaceConfig(@PathVariable String namespace) {
         if (authorizationService.getNamespaceConfig(namespace) != null) {

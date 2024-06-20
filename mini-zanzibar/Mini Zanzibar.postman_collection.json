@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "17bc4d1e-a5e9-46cf-9ea0-26a93855ff80",
+		"name": "Mini Zanzibar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25076779"
+	},
+	"item": [
+		{
+			"name": "Add relation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"vuk\",\r\n    \"relation\": \"viewer\",\r\n    \"object\": \"doc:gas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check relation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/auth/vuk-boss-doc:gas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"vuk-boss-doc:gas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save namespace config",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"relations\": {\r\n        \"godfather\": [],\r\n        \"boss\": [\"godfather\"],\r\n\t\t\"owner\": [\"boss\"],\r\n\t\t\"editor\": [\"owner\"],\r\n\t\t\"viewer\": [\"editor\"]\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/namespace/doc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"namespace",
+						"doc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get namespace config",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/auth/namespace/doc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"namespace",
+						"doc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
