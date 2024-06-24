@@ -14,7 +14,8 @@ on:
 jobs:
   analyze:
     name: Analyze Code with CodeQL
-    runs-on: ubuntu-latest
+    timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
+    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
     permissions:
       security-events: write
       packages: read
@@ -22,9 +23,9 @@ jobs:
       contents: read
 
     strategy:
+      fail-fast: false
       matrix:
         language:
-          - 'java-kotlin'
           - 'java-kotlin'
           - 'javascript-typescript'
         build-mode: [ 'full' ]  # Assuming 'full' build mode for simplicity
