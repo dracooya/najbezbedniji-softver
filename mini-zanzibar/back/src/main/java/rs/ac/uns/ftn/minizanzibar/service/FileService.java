@@ -36,11 +36,25 @@ public class FileService {
     }
 
     public void savePost(PostDTO post, String user) {
-        Post newPost = new Post((long)(this.allPosts.size() + 1), post.getFilename(), post.getTags());
-        this.allPosts.add(newPost);
-        if(this.userPosts.containsKey(user))
-            this.userPosts.get(user).add(newPost);
-        else this.userPosts.put(user, List.of(newPost));
+        try{
+            Post newPost = new Post((long)(this.allPosts.size() + 1), post.getFilename(), post.getTags());
+            this.allPosts.add(newPost);
+            AclDTO acl = new AclDTO(user,"owner","doc:" + newPost.getId());
+            String jsonPayload = objectMapper.writeValueAsString(acl);
+            webClientBuilder.build()
+                    .post()
+                    .uri("http://localhost:8081/api/auth")
+                    .header(HttpHeaders.CONTENT_TYPE, "application/json")
+                    .body(Mono.just(jsonPayload), String.class)
+                    .retrieve().bodyToMono(ObjectMapper.class).subscribe();
+            if(this.userPosts.containsKey(user))
+                this.userPosts.get(user).add(newPost);
+            else this.userPosts.put(user, List.of(newPost));
+        }
+        catch (JsonProcessingException e) {
+            e.printStackTrace();
+            throw new RuntimeException();
+        }
     }
 
     public void modifyPost(PostDTO post, String user, Long id) {
@@ -73,7 +87,6 @@ public class FileService {
 
 
     public void shareAccess(AclDTO acl) {
-        System.out.println(acl);
         try {
             Optional<Post> post = this.allPosts.stream()
                     .filter(obj -> obj.getId().equals(Long.parseLong(acl.getObject().split(":")[1])))
@@ -81,7 +94,6 @@ public class FileService {
 
             if(post.isPresent()) {
                 String jsonPayload = objectMapper.writeValueAsString(acl);
-                System.out.println(jsonPayload);
                 webClientBuilder.build()
                         .post()
                         .uri("http://localhost:8081/api/auth")

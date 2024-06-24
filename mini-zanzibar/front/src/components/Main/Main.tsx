@@ -136,6 +136,10 @@ export function Main({userService, fileService} : MainProps) {
                                                             </Avatar>
                                                         </ListItemAvatar>
                                                         <ListItemText
+                                                            onClick={() => {
+                                                                setSelectedFileToEdit(upload);
+                                                                setEditDialogOpen(true);
+                                                            }}
                                                             primary={upload.filename}
                                                         />
                                                     </ListItem>
@@ -179,20 +183,6 @@ export function Main({userService, fileService} : MainProps) {
                                                 })}
                                             </List>
                                             <Grid xs={12} sm={12} md={8} lg={8} xl={8} container className="container rounded-container">
-                                                <Dialog  open={editDialogOpen} >
-                                                    <Grid item pl={4} pr={4} pt={2} pb={4} className="container rounded-container">
-                                                        <Grid item container justifyContent={'right'} mb={1}>
-                                                            <IconButton aria-label="close" color="primary" className={'close-button'}
-                                                                        onClick={() => setEditDialogOpen(false)}>
-                                                                <CloseIcon/>
-                                                            </IconButton>
-                                                        </Grid>
-                                                        <UploadOrModify item={selectedFileToEdit}
-                                                                        userService={userService}
-                                                                        fileService={fileService}
-                                                                        isModify={true}></UploadOrModify>
-                                                    </Grid>
-                                                </Dialog>
                                             </Grid>
                                         </Grid>
                                     </TabPanel>
@@ -200,6 +190,20 @@ export function Main({userService, fileService} : MainProps) {
                             </Grid>
                 </Grid>
             </Grid>
+            <Dialog  open={editDialogOpen} >
+                <Grid item pl={4} pr={4} pt={2} pb={4} className="container rounded-container">
+                    <Grid item container justifyContent={'right'} mb={1}>
+                        <IconButton aria-label="close" color="primary" className={'close-button'}
+                                    onClick={() => setEditDialogOpen(false)}>
+                            <CloseIcon/>
+                        </IconButton>
+                    </Grid>
+                    <UploadOrModify item={selectedFileToEdit}
+                                    userService={userService}
+                                    fileService={fileService}
+                                    isModify={true}></UploadOrModify>
+                </Grid>
+            </Dialog>
     <PopupMessage message={errorMessage} isSuccess={isSuccess} handleClose={handleErrorPopupClose} open={errorPopupOpen}/>
         </>
     );
