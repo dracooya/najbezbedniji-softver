@@ -9,7 +9,4 @@ export class UserService {
         return sessionStorage.getItem('username');
     }
 
-    public signOut(): void {
-        sessionStorage.removeItem('username');
-    }
 }

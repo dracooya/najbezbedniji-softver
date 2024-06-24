@@ -12,7 +12,6 @@ export class FileService {
             url: `${this.api_host}/api/post/share`,
             data: shareAccess
         }).then((response) => response.data).catch((err) => {
-            console.log(shareAccess);
             throw err
         });
     }

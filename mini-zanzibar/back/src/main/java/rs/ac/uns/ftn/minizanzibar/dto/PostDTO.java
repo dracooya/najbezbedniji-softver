@@ -17,7 +17,6 @@ public class PostDTO {
 
     @NotBlank(message = "{required}")
     @Length(min = 1, max = 255, message = "{minmax}")
-    @NotNull(message = "{missing}")
     private String filename;
     @NotNull(message = "{missing}")
     private List<Tag> tags;
