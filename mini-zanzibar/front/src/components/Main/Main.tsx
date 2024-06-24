@@ -1,10 +1,25 @@
-import {Box, Button, Chip, Grid, ListItem, Tab, Tabs, TextField, Typography} from "@mui/material";
+import {
+    Avatar,
+    Box,
+    Button,
+    Chip,
+    Grid, IconButton, List,
+    ListItem,
+    ListItemAvatar,
+    ListItemText,
+    Tab,
+    Tabs,
+    TextField
+} from "@mui/material";
 import React, {useEffect} from "react";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {UserService} from "../../services/UserService.ts";
 import {FileService} from "../../services/FileService.ts";
 import {TagInfo} from "../../TagInfo.ts";
 import {PopupMessage} from "../PopupMessage/PopupMessage.tsx";
+import ShareIcon from '@mui/icons-material/Share';
+import ImageIcon from '@mui/icons-material/Image';
+import {SharingAccess} from "../SharingAccess/SharingAccess.tsx";
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -21,7 +36,7 @@ interface TagForm {
     value: string
 }
 
-interface LoginRegistrationProps {
+interface MainProps {
     userService: UserService,
     fileService: FileService
 }
@@ -44,11 +59,6 @@ function TabPanel(props: TabPanelProps) {
         </div>
     );
 }
-
-const onSubmit: SubmitHandler<UploadForm> = (formData) => {
-
-}
-
 function tabSetup(index: number) {
     return {
         id: `tab-${index}`,
@@ -56,13 +66,16 @@ function tabSetup(index: number) {
     };
 }
 
-export function Main() {
+export function Main({userService, fileService} : MainProps) {
     const [tabValue, setTabTabValue] = React.useState<number>(0);
     const [addedTags, setAddedTags] = React.useState<TagInfo[]>([]);
     const [errorMessage, setErrorMessage] = React.useState('');
     const [errorPopupOpen, setErrorPopupOpen] = React.useState(false);
     const [isSuccess, setIsSuccess] = React.useState(false);
-    const {register, handleSubmit, formState: {errors}, setValue: setValueName} = useForm<UploadForm>({
+    const [sharingDialogOpen, setSharingDialogOpen] = React.useState<boolean>(false);
+    const [selectedFileToPreview, setSelectedFileToPreview] = React.useState<string>("");
+    const [uploads, setUploads] = React.useState(["idk.png"]);
+    const {register, handleSubmit, formState: {errors}} = useForm<UploadForm>({
         defaultValues: {
             filename: ""
         },
@@ -80,11 +93,23 @@ export function Main() {
 
     function upload(formData : UploadForm) {}
 
+    const onSubmit: SubmitHandler<UploadForm> = (formData) => {upload(formData)}
+
+
     const onAddTag: SubmitHandler<TagForm> = (tagData) => addTag(tagData);
 
     const handleTagDelete = (chipToDelete: TagInfo) => () => {
         setAddedTags((chips) => chips.filter((chip) => chip.name !== chipToDelete.name));
     };
+
+
+    function generate(element: React.ReactElement) {
+        return [0, 1, 2,3,4,5,6,7,8,9,10,11,12].map((value) =>
+            React.cloneElement(element, {
+                key: value,
+            }),
+        );
+    }
 
     const addTag = (data : TagForm) => {
         if (addedTags.filter(chip => chip.name == data.name).length > 0) {
@@ -109,7 +134,7 @@ export function Main() {
             <Grid container alignItems={'center'} justifyContent={'center'} className={'dark-background'} height={'100%'} width={'100%'}>
                 <Grid container item xs={12} sm={12} md={10} lg={8} xl={8}
                       height={'fit-content'}
-                      minHeight={'70vh'}
+                      minHeight={'80vh'}
                       className="container rounded-container">
                             <Grid item container xs={12} sm={12} md={12} lg={12} xl={12}>
                                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
@@ -224,11 +249,44 @@ export function Main() {
                                             </React.Fragment>
                                         </Grid>
                                     </TabPanel>
+                                    <TabPanel value={tabValue} index={1}>
+                                        <Grid item id={'lol'} sx={{
+                                            height:'60vh',
+                                            overflowY:'scroll'
+                                        }}>
+                                            <List dense={false}>
+                                                {uploads.map((upload) => {
+                                                    return <ListItem
+                                                        secondaryAction={
+                                                            <IconButton edge="end" aria-label="share"
+                                                                        onClick={() => {
+                                                                            setSelectedFileToPreview(upload);
+                                                                            setSharingDialogOpen(true);
+                                                                        }
+                                                                        }>
+                                                                <ShareIcon/>
+                                                            </IconButton>
+                                                        }>
+                                                        <ListItemAvatar>
+                                                            <Avatar>
+                                                                <ImageIcon/>
+                                                            </Avatar>
+                                                        </ListItemAvatar>
+                                                        <ListItemText
+                                                            primary={upload}
+                                                        />
+                                                    </ListItem>
+                                                })}
+                                            </List>
+                                        </Grid>
+                                        <SharingAccess open={sharingDialogOpen}
+                                                       handleClose={() => setSharingDialogOpen(false)}
+                                                       userService={userService}
+                                                       fileService={fileService}
+                                                       selectedPost={selectedFileToPreview}
+                                        />
+                                    </TabPanel>
                                 </Grid>
-                            </Grid>
-                            <Grid item justifyContent={'center'} xs={12} sm={12} md={12} lg={12} xl={12}>
-                                <TabPanel value={tabValue} index={1}>
-                                </TabPanel>
                             </Grid>
                 </Grid>
             </Grid>
