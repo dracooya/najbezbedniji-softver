@@ -78,7 +78,7 @@ jobs:
     - name: Build with Maven
       if: matrix.language == 'java-kotlin'
       run: |
-        cd mini-zanzibar
+        cd mini-zanzibar/back
         ./mvnw clean install
     # If the analyze step fails for one of the languages you are analyzing with
     # "We were unable to automatically build your code", modify the matrix above
