@@ -14,10 +14,8 @@ public class AclDTO {
     private String user;
     @NotEmpty(message = "{relation.notempty}")
     private String relation;
-
     @NotEmpty(message = "{object.notempty}")
-    @Pattern(regexp = "^[a-zA-Z0-9]+:[a-zA-Z0-9]+$", message = "{object.pattern}")
-    private String object;
+    private Long object;
 
     public String getLevelDBKey() {
         return user + "-" + object;

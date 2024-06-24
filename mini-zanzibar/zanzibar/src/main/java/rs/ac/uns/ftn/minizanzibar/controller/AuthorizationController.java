@@ -47,7 +47,7 @@ public class AuthorizationController {
                                                  @Valid @RequestBody NamespaceConfig config) throws ConstraintViolationException {
         logger.info("Namespace: " + namespace + ", config: " + config.getRelations().toString());
         try {
-            if (authorizationService.saveNamespaceConfig(namespace, objectMapper.writeValueAsString(config.getRelations()))) {
+            if (authorizationService.   saveNamespaceConfig(namespace, objectMapper.writeValueAsString(config.getRelations()))) {
                 return ResponseEntity.ok().build();
             } else {
                 return ResponseEntity.badRequest().build();

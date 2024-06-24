@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
+import rs.ac.uns.ftn.minizanzibar.dto.AclDTO;
 import rs.ac.uns.ftn.minizanzibar.dto.PostDTO;
 import rs.ac.uns.ftn.minizanzibar.service.FileService;
 
@@ -49,5 +50,15 @@ public class FileController {
     @GetMapping(path="/shared/{user}")
     public ResponseEntity<?> getUserSharedPosts(@PathVariable String user) {
         return new ResponseEntity<>(fileService.getUserSharedPosts(user), HttpStatus.OK);
+    }
+
+    @PostMapping(path = "/share")
+    public ResponseEntity<?> shareAccess(@RequestBody @Valid AclDTO acl) {
+        try {
+            fileService.shareAccess(acl);
+            return new ResponseEntity<>(messageSource.getMessage("post.shared", null, Locale.getDefault()), HttpStatus.OK);
+        } catch (ResponseStatusException ex) {
+            return new ResponseEntity<>(ex.getReason(), ex.getStatusCode());
+        }
     }
 }
