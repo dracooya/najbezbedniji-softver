@@ -13,7 +13,7 @@ import {
     TextField, Typography
 } from "@mui/material";
 import {useForm} from "react-hook-form";
-import {ShareAccess} from "../models/ShareAccess.ts";
+import {ShareAccess} from "../../models/ShareAccess.ts";
 import CloseIcon from '@mui/icons-material/Close';
 import {PopupMessage} from "../PopupMessage/PopupMessage.tsx";
 
@@ -154,8 +154,8 @@ export function SharingAccess({open,handleClose,fileService,selectedPost} : Shar
                                 value={accessRights}
                                 onChange={handleOnAccessRightChange}
                                 name="radio-buttons-group">
-                                <FormControlLabel value="viewer" control={<Radio/>} label="Preview Only"/>
-                                <FormControlLabel value="editor" control={<Radio/>} label="Preview & Modification"/>
+                                <FormControlLabel value="viewer" control={<Radio/>} label="Viewer"/>
+                                <FormControlLabel value="editor" control={<Radio/>} label="Editor"/>
                             </RadioGroup>
                         </FormControl>
                         <Typography mt={3} textAlign={'center'}>{description}</Typography>

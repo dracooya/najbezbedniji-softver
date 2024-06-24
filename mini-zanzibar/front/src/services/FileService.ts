@@ -1,5 +1,6 @@
 import axios from "axios";
-import {ShareAccess} from "../components/models/ShareAccess.ts";
+import {ShareAccess} from "../models/ShareAccess.ts";
+import {Post} from "../models/Post.ts";
 
 export class FileService {
 
@@ -9,6 +10,26 @@ export class FileService {
             method: 'POST',
             url: `${this.api_host}/api/auth`,
             data: shareAccess
+        }).then((response) => response.data).catch((err) => {
+            throw err
+        });
+    }
+
+    public addNewPost(post: Post): Promise<string> {
+        return axios({
+            method: 'POST',
+            url: `${this.api_host}/api/post`,
+            data: post
+        }).then((response) => response.data).catch((err) => {
+            throw err
+        });
+    }
+
+    public modifyPost(post: Post): Promise<string> {
+        return axios({
+            method: 'PUT',
+            url: `${this.api_host}/api/post`,
+            data: post
         }).then((response) => response.data).catch((err) => {
             throw err
         });
