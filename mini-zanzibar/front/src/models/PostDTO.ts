@@ -1,7 +1,6 @@
 import {TagInfo} from "./TagInfo.ts";
 
-export interface Post {
-    id: number,
+export interface PostDTO {
     filename: string,
     tags: TagInfo[]
 }

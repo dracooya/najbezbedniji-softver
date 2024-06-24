@@ -16,12 +16,13 @@ import {useForm} from "react-hook-form";
 import {ShareAccess} from "../../models/ShareAccess.ts";
 import CloseIcon from '@mui/icons-material/Close';
 import {PopupMessage} from "../PopupMessage/PopupMessage.tsx";
+import {Post} from "../../models/Post.ts";
 
 interface SharingAccessProps {
     open: boolean,
     handleClose: () => void,
     fileService: FileService,
-    selectedPost: string
+    selectedPost: Post | null
 }
 
 interface UserForm {
@@ -57,23 +58,17 @@ export function SharingAccess({open,handleClose,fileService,selectedPost} : Shar
         usersList.forEach((user, index) => {
             const shareAccess: ShareAccess = {
                 user: user,
-                relation: accessRights[index],
-                object: "doc:" + selectedPost
+                relation: accessRights,
+                object: "doc:" + selectedPost?.id
             }
-            fileService.addShareAccess(shareAccess).then((response) => {
-                if (response.length == 0) {
-                    setErrorMessage("Access successfully shared!");
-                    setIsSuccess(true);
-                    setErrorPopupOpen(true);
-                    handleClose();
-                }
-                else {
-                    setErrorMessage(response);
-                    setIsSuccess(false);
-                    setErrorPopupOpen(true);
-                }
-
-            }).catch(() => {})
+            fileService.addShareAccess(shareAccess).then(() => {
+                window.location.reload();
+            }).catch((error) => {
+                console.log(error)
+                setErrorMessage(error.response.data);
+                setIsSuccess(false);
+                setErrorPopupOpen(true);
+            })
         })
     }
 

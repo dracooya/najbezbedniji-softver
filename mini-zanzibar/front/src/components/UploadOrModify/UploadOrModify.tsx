@@ -5,10 +5,13 @@ import {FileService} from "../../services/FileService.ts";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {TagInfo} from "../../models/TagInfo.ts";
 import {PopupMessage} from "../PopupMessage/PopupMessage.tsx";
+import {PostDTO} from "../../models/PostDTO.ts";
+import {UserService} from "../../services/UserService.ts";
 
 interface UploadProps  {
     item: Post | null,
     fileService: FileService,
+    userService: UserService,
     isModify: boolean,
 }
 
@@ -21,7 +24,7 @@ interface TagForm {
     value: string
 }
 
-export function UploadOrModify({item,fileService,isModify} : UploadProps) {
+export function UploadOrModify({item,fileService,userService,isModify} : UploadProps) {
     const [addedTags, setAddedTags] = React.useState<TagInfo[]>([]);
     const [errorMessage, setErrorMessage] = React.useState('');
     const [errorPopupOpen, setErrorPopupOpen] = React.useState(false);
@@ -42,12 +45,12 @@ export function UploadOrModify({item,fileService,isModify} : UploadProps) {
     });
     const onSubmit: SubmitHandler<UploadForm> = (formData) => {upload(formData)}
     function upload(formData : UploadForm) {
-        const post: Post = {
+        const post: PostDTO = {
             filename: formData.filename,
             tags: addedTags
         }
         if (!isModify) {
-            fileService.addNewPost(post).then(() => {
+            fileService.addNewPost(post, userService.getUser()).then(() => {
                 setErrorMessage("Successfully added a new post!");
                 setIsSuccess(true);
                 setErrorPopupOpen(true);
@@ -58,7 +61,7 @@ export function UploadOrModify({item,fileService,isModify} : UploadProps) {
                 setErrorPopupOpen(true);
             })
         } else {
-            fileService.modifyPost(post).then(() => {
+            fileService.modifyPost(post, userService.getUser(), item!.id).then(() => {
                 setErrorMessage("Successfully edited the post!");
                 setIsSuccess(true);
                 setErrorPopupOpen(true);

@@ -15,9 +15,6 @@ public class AclDTO {
     @NotEmpty(message = "{relation.notempty}")
     private String relation;
     @NotEmpty(message = "{object.notempty}")
-    private Long object;
+    private String object;
 
-    public String getLevelDBKey() {
-        return user + "-" + object;
-    }
 }

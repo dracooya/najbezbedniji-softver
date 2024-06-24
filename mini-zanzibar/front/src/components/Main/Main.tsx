@@ -1,17 +1,14 @@
 import {
     Avatar,
-    Box,
-    Button,
-    Chip, Dialog,
+    Box, Dialog,
     Grid, IconButton, List,
     ListItem,
     ListItemAvatar,
     ListItemText,
     Tab,
     Tabs,
-    TextField
 } from "@mui/material";
-import React, {useEffect} from "react";
+import React, {useEffect, useRef} from "react";
 import {UserService} from "../../services/UserService.ts";
 import {FileService} from "../../services/FileService.ts";
 import {PopupMessage} from "../PopupMessage/PopupMessage.tsx";
@@ -66,10 +63,11 @@ export function Main({userService, fileService} : MainProps) {
     const [isSuccess, setIsSuccess] = React.useState(false);
     const [sharingDialogOpen, setSharingDialogOpen] = React.useState<boolean>(false);
     const [editDialogOpen, setEditDialogOpen] = React.useState<boolean>(false);
-    const [selectedFileToPreview, setSelectedFileToPreview] = React.useState<string>("");
+    const [selectedFileToPreview, setSelectedFileToPreview] = React.useState<Post>(null);
     const [selectedFileToEdit, setSelectedFileToEdit] = React.useState<Post>(null);
-    const [uploads, setUploads] = React.useState(["idk.png"]);
-    const [shared, setShared] = React.useState<Post[]>([{filename:"yup.png",tags:[{name:"lol", value:"no"}]}]);
+    const [uploads, setUploads] = React.useState<Post[]>([]);
+    const [shared, setShared] = React.useState<Post[]>([]);
+    const shouldLoad = useRef(true);
 
     const handleTabChange = (_event: React.SyntheticEvent,newValue: number) => setTabTabValue(newValue);
 
@@ -79,6 +77,15 @@ export function Main({userService, fileService} : MainProps) {
     };
 
     useEffect(() => {
+        if(!shouldLoad.current) return;
+        const user = userService.getUser();
+        fileService.getUserPosts(user).then(posts => {
+            setUploads(posts);
+            fileService.getUserSharedPosts(user).then(shares => {
+                setShared(shares);
+                shouldLoad.current = false;
+            })
+        });
     }, []);
 
     return (
@@ -101,6 +108,7 @@ export function Main({userService, fileService} : MainProps) {
                                 <Grid item justifyContent={'center'} xs={12} sm={12} md={12} lg={12} xl={12} >
                                     <TabPanel value={tabValue} index={0}>
                                        <UploadOrModify item={null}
+                                                       userService={userService}
                                                        fileService={fileService}
                                                        isModify={false}></UploadOrModify>
                                     </TabPanel>
@@ -128,7 +136,7 @@ export function Main({userService, fileService} : MainProps) {
                                                             </Avatar>
                                                         </ListItemAvatar>
                                                         <ListItemText
-                                                            primary={upload}
+                                                            primary={upload.filename}
                                                         />
                                                     </ListItem>
                                                 })}
@@ -180,6 +188,7 @@ export function Main({userService, fileService} : MainProps) {
                                                             </IconButton>
                                                         </Grid>
                                                         <UploadOrModify item={selectedFileToEdit}
+                                                                        userService={userService}
                                                                         fileService={fileService}
                                                                         isModify={true}></UploadOrModify>
                                                     </Grid>

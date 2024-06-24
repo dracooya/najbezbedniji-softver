@@ -48,7 +48,7 @@ public class FileService {
                 .filter(obj -> obj.getId().equals(id))
                 .findFirst();
         if(toModify.isPresent()) {
-            getShareACL(user, "editor","doc:" + id).subscribe(response -> {
+            AuthorizedDTO response = getShareACL(user, "editor","doc:" + id);
                 if (Boolean.parseBoolean(response.getAuthorized())) {
                     Post postToModify = toModify.get();
                     postToModify.setFilename(post.getFilename());
@@ -57,7 +57,6 @@ public class FileService {
                 else {
                     throw new ResponseStatusException(HttpStatus.BAD_REQUEST, messageSource.getMessage("post.insufficientRole", null, Locale.getDefault()));
                 }
-                });
             }
         else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, messageSource.getMessage("post.notFound", null, Locale.getDefault()));
@@ -74,13 +73,15 @@ public class FileService {
 
 
     public void shareAccess(AclDTO acl) {
+        System.out.println(acl);
         try {
             Optional<Post> post = this.allPosts.stream()
-                    .filter(obj -> obj.getId().equals(acl.getObject()))
+                    .filter(obj -> obj.getId().equals(Long.parseLong(acl.getObject().split(":")[1])))
                     .findFirst();
 
             if(post.isPresent()) {
                 String jsonPayload = objectMapper.writeValueAsString(acl);
+                System.out.println(jsonPayload);
                 webClientBuilder.build()
                         .post()
                         .uri("http://localhost:8081/api/auth")
@@ -100,14 +101,14 @@ public class FileService {
         }
     }
 
-    public Mono<AuthorizedDTO> getShareACL(String user, String role, String object) {
+    public AuthorizedDTO getShareACL(String user, String role, String object) {
         String uri = user + "-" + role + "-" + object;
         return webClientBuilder.build()
                 .get()
                 .uri("http://localhost:8081/api/auth/" + uri)
                 .header(HttpHeaders.CONTENT_TYPE, "application/json")
                 .retrieve()
-                .bodyToMono(AuthorizedDTO.class);
+                .bodyToMono(AuthorizedDTO.class).block();
     }
 
 }
