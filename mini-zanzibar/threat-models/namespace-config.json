@@ -32,8 +32,8 @@
                 "text": "Mini Zanzibar Authorization System"
               }
             },
-            "id": "1b3de08d-ce8d-43bb-963c-cf0e62ae9d1f",
             "zIndex": -1,
+            "id": "1b3de08d-ce8d-43bb-963c-cf0e62ae9d1f",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Mini Zanzibar Authorization System",
@@ -114,13 +114,6 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -191,7 +184,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "6. Response Forwarding",
+              "name": "5. Response Forwarding",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -203,15 +196,15 @@
               "threats": []
             },
             "id": "3fe1dedc-df2c-427c-9840-944d75d4f88b",
+            "labels": [
+              "5. Response Forwarding"
+            ],
             "source": {
               "cell": "75f995ec-1e81-4912-908c-611e4491b6ca"
             },
             "target": {
               "cell": "17db9f65-82c9-4298-b995-39a129e8afc7"
             },
-            "labels": [
-              "6. Response Forwarding"
-            ],
             "vertices": [
               {
                 "x": 710,
@@ -239,7 +232,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "7. Response Forwarding",
+              "name": "6. Response Forwarding",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -251,6 +244,9 @@
               "threats": []
             },
             "id": "6f9c9356-eec2-47ff-85bb-f6f82aa93cbe",
+            "labels": [
+              "6. Response Forwarding"
+            ],
             "source": {
               "cell": "17db9f65-82c9-4298-b995-39a129e8afc7"
             },
@@ -263,12 +259,9 @@
                 "y": 325
               },
               {
-                "x": 370,
+                "x": 340,
                 "y": 325
               }
-            ],
-            "labels": [
-              "7. Response Forwarding"
             ]
           },
           {
@@ -303,6 +296,9 @@
               "threats": []
             },
             "id": "10863a40-ed18-4474-961a-84ed9324cf63",
+            "labels": [
+              "2. Request Forwarding"
+            ],
             "source": {
               "cell": "17db9f65-82c9-4298-b995-39a129e8afc7"
             },
@@ -318,9 +314,6 @@
                 "x": 760,
                 "y": 140
               }
-            ],
-            "labels": [
-              "2. Request Forwarding"
             ]
           },
           {
@@ -343,7 +336,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "4. Save/Get Request",
+              "name": "3. Save/Get Request",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -355,6 +348,9 @@
               "threats": []
             },
             "id": "9035f17f-f5f9-441d-bfc7-40806addaa45",
+            "labels": [
+              "3. Save/Get Request"
+            ],
             "source": {
               "cell": "75f995ec-1e81-4912-908c-611e4491b6ca"
             },
@@ -374,9 +370,6 @@
                 "x": 1060,
                 "y": 200
               }
-            ],
-            "labels": [
-              "4. Save/Get Request"
             ]
           },
           {
@@ -399,7 +392,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "5. Response",
+              "name": "4. Response",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -411,15 +404,15 @@
               "threats": []
             },
             "id": "a330212b-5079-4e1e-b047-26edc2d8b164",
+            "labels": [
+              "4. Response"
+            ],
             "source": {
               "cell": "f8f30e8f-ceb4-43b6-99f9-06ba98433d9d"
             },
             "target": {
               "cell": "75f995ec-1e81-4912-908c-611e4491b6ca"
-            },
-            "labels": [
-              "5. Response"
-            ]
+            }
           },
           {
             "position": {
@@ -442,8 +435,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "17db9f65-82c9-4298-b995-39a129e8afc7",
             "zIndex": 12,
+            "id": "17db9f65-82c9-4298-b995-39a129e8afc7",
             "data": {
               "type": "tm.Process",
               "name": "Authorization\nRequest\nHandler",
@@ -482,8 +475,8 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "f8f30e8f-ceb4-43b6-99f9-06ba98433d9d",
             "zIndex": 13,
+            "id": "f8f30e8f-ceb4-43b6-99f9-06ba98433d9d",
             "data": {
               "type": "tm.Store",
               "name": "Namespace \nConfiguration \nStorage",
