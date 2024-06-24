@@ -27,21 +27,22 @@ jobs:
           - 'java-kotlin'
           - 'java-kotlin'
           - 'javascript-typescript'
-        build-mode: [ 'full' ]  # Assuming 'full' build mode for simplicity
+        build-mode: [ 'manual' ]  # Assuming 'full' build mode for simplicity
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
       
-      - name: Setup JDK 17 (for Java analysis in back and mini-zanzibar folders)
-        if: matrix.language == 'java-kotlin'
-        uses: actions/setup-java@v2
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
         with:
           java-version: '17'
+          distribution: 'temurin'
+        
 
       - name: Install Node.js (for TypeScript analysis in front folder)
         if: matrix.language == 'javascript-typescript'
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '14'
 
@@ -49,21 +50,22 @@ jobs:
         uses: github/codeql-action/init@v3
         with:
           languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
 
       - name: Build Java/Kotlin code in mini-zanzibar folder
-        if: matrix.language == 'java-kotlin' && matrix.build-mode == 'full'
+        if: matrix.language == 'java-kotlin'
         run: |
           cd mini-zanzibar/zanzibar
           ./mvnw clean install  # Adjust Maven command as per your project setup
 
       - name: Build Java/Kotlin code in back folder
-        if: matrix.language == 'java-kotlin' && matrix.build-mode == 'full'
+        if: matrix.language == 'java-kotlin'
         run: |
           cd mini-zanzibar/back
           ./mvnw clean install  # Adjust Maven command as per your project setup
 
       - name: Build TypeScript code in front folder
-        if: matrix.language == 'javascript-typescript' && matrix.build-mode == 'full'
+        if: matrix.language == 'javascript-typescript'
         run: |
           cd mini-zanzibar/front
           npm install  # Install dependencies for TypeScript
